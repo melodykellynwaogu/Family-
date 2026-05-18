@@ -16,7 +16,7 @@
       name="keywords"
       content="supermarket, groceries, fresh food, family fair, shopping, vegetables, fruits, household items"
     />
-    
+
     <meta 
       name="google-site-verification" 
       content="2rgDlfAFb57bcx8nW--jxTQBHM4CmyHF8XozJciKH88" 
@@ -67,6 +67,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Preload lazy module chunks to reduce fetch latency -->
+    <link rel="modulepreload" href="/src/components/Hero.jsx">
+    <link rel="modulepreload" href="/src/components/ProductsPanel.jsx">
+    <link rel="modulepreload" href="/src/components/CartSidebar.jsx">
   </head>
 
   <body>

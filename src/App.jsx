@@ -1,9 +1,8 @@
-import { useMemo, useState } from 'react'
-import products from './data/products'
-import ProductCard from './components/ProductCard'
-import CartSidebar from './components/CartSidebar'
+import { useState, lazy, Suspense } from 'react'
 import WelcomePage from './components/WelcomePage'
-import Hero from './components/Hero'
+const Hero = lazy(() => import('./components/Hero'))
+const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
+const CartSidebar = lazy(() => import('./components/CartSidebar'))
 import './App.css'
 
 const categories = ['All', 'Fresh Produce', 'Family Meals', 'Pantry', 'Snacks', 'Dairy']
@@ -13,15 +12,6 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchTerm, setSearchTerm] = useState('')
   const [cartItems, setCartItems] = useState([])
-
-  const filteredProducts = useMemo(() => {
-    return products.filter((product) => {
-      const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory
-      const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase())
-        || product.description.toLowerCase().includes(searchTerm.toLowerCase())
-      return matchesCategory && matchesSearch
-    })
-  }, [selectedCategory, searchTerm])
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)
   const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0)
@@ -76,55 +66,24 @@ function App() {
         </div>
       </header>
 
-      <Hero onSelectCategory={setSelectedCategory} />
+      <Suspense fallback={<div className="hero-skeleton" /> }>
+        <Hero onSelectCategory={setSelectedCategory} />
+      </Suspense>
 
       <main className="shop-layout">
-        <section className="shop-panel">
-          <div className="search-card">
-            <label htmlFor="search">Search groceries</label>
-            <input
-              id="search"
-              type="search"
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
-              placeholder="Search products, meals, or snacks"
-            />
-          </div>
+        <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>
+          <ProductsPanel
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            onAdd={handleAdd}
+          />
+        </Suspense>
 
-          <div className="category-list" aria-label="Product categories">
-            {categories.map((category) => (
-              <button
-                key={category}
-                type="button"
-                className={category === selectedCategory ? 'category-button active' : 'category-button'}
-                onClick={() => setSelectedCategory(category)}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </section>
-
-        <section className="products-panel">
-          <div className="products-header">
-            <div>
-              <span className="products-label">{selectedCategory === 'All' ? 'All products' : selectedCategory}</span>
-              <p>{filteredProducts.length} items available</p>
-            </div>
-          </div>
-
-          <div className="product-grid">
-            {filteredProducts.length > 0 ? (
-              filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} onAdd={handleAdd} />
-              ))
-            ) : (
-              <div className="empty-state">No products match your search. Try a different keyword.</div>
-            )}
-          </div>
-        </section>
-
-        <CartSidebar cartItems={cartItems} total={total} onRemove={handleRemove} onClear={handleClear} />
+        <Suspense fallback={<div className="cart-skeleton"/>}>
+          <CartSidebar cartItems={cartItems} total={total} onRemove={handleRemove} onClear={handleClear} />
+        </Suspense>
       </main>
 
       <footer className="footer-banner">
