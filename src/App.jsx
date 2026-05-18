@@ -1,5 +1,6 @@
 import { useState, lazy, Suspense } from 'react'
 import WelcomePage from './components/WelcomePage'
+import Header from './components/Header'
 const Hero = lazy(() => import('./components/Hero'))
 const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
 const CartSidebar = lazy(() => import('./components/CartSidebar'))
@@ -52,19 +53,7 @@ function App() {
 
   return (
     <div className="family-fair-app">
-      <header className="site-header">
-        <div className="site-brand">Family Fair</div>
-        <nav className="site-nav" aria-label="Primary navigation">
-          <button type="button">Product</button>
-          <button type="button">Integrations</button>
-          <button type="button">Pricing</button>
-          <button type="button">Resources</button>
-        </nav>
-        <div className="site-actions">
-          <button type="button" className="ghost-button">Book a call</button>
-          <button type="button" className="primary-button">Contact us</button>
-        </div>
-      </header>
+      <Header />
 
       <Suspense fallback={<div className="hero-skeleton" /> }>
         <Hero onSelectCategory={setSelectedCategory} />

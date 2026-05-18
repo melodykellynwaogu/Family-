@@ -1,42 +1,63 @@
+import { useEffect, useMemo, useState } from 'react'
 import '../styles/hero.css'
 
-function Hero({ onSelectCategory }) {
+import hero1 from '../assets/1.png'
+import hero2 from '../assets/2.png'
+import hero3 from '../assets/3.png'
+
+const defaultBackgrounds = [
+  { type: 'image', src: hero1 },
+  { type: 'image', src: hero2 },
+  { type: 'image', src: hero3 },
+]
+
+function Hero({ onSelectCategory, backgrounds = defaultBackgrounds }) {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveIndex((current) => (current + 1) % backgrounds.length)
+    }, 6000)
+    return () => window.clearInterval(timer)
+  }, [backgrounds.length])
+
+  const currentBackground = backgrounds[activeIndex]
+  const backgroundStyle = useMemo(() => {
+    if (currentBackground.type === 'image') {
+      return {
+        backgroundImage: `url(${currentBackground.src})`,
+      }
+    }
+
+    return {
+      backgroundImage: currentBackground.src,
+    }
+  }, [currentBackground])
+
   return (
-    <header className="hero">
-      <div className="hero__copy">
-        <p className="eyebrow">Family Fair</p>
-        <div className="hero__copyHeading">
-          <span className="hero__label">Supermarket</span>
-          <h1>Enjoy great food with modern supermarket style.</h1>
-        </div>
-        <p>
-          Discover fresh produce, family meals, and quality pantry essentials in a clean, bold
-          supermarket homepage designed for fast shopping.
-        </p>
-        <div className="hero__actions">
-          <button type="button" onClick={() => onSelectCategory('Fresh Produce')}>
-            Shop Now
-          </button>
-          <button type="button" className="hero__secondary" onClick={() => onSelectCategory('Family Meals')}>
-            Explore Meals
-          </button>
-          <button type="button" onClick={() => { window.location.href = '/' }}>
-            Back Home
-          </button>
-        </div>
-      </div>
-      <aside className="hero__visual">
-        <div className="hero__visual-card">
-          <div className="hero__visual-badge">Premium Meat</div>
-          <h2>Enjoy great food with family favorites.</h2>
-          <p>Our supermarket selection brings fresh cuts, seasonal veggies, and quality snacks into one easy cart.</p>
-          <div className="hero__visual-meta">
-            <span>Fresh daily</span>
-            <span>Family portions</span>
+    <section className="hero hero--showcase">
+      <div className="hero__background" style={backgroundStyle} />
+      <div className="hero__backdrop" />
+
+      <div className="hero__content">
+        <div className="hero__panel">
+          <p className="hero__eyebrow">Family Fair</p>
+          <h1 className="hero__title">The grocery ecommerce platform your customers will love</h1>
+          <p className="hero__subtitle">
+            Delight busy families with fresh produce, easy cart flow, and a modern storefront built for grocery shopping.
+          </p>
+
+          <div className="hero__actions">
+            <button type="button" className="hero__primary" onClick={() => onSelectCategory('Fresh Produce')}>
+              Shop fresh
+            </button>
+            <button type="button" className="hero__secondary" onClick={() => onSelectCategory('Family Meals')}>
+              Explore meals
+            </button>
           </div>
         </div>
-      </aside>
-    </header>
+      </div>
+    </section>
   )
 }
 
