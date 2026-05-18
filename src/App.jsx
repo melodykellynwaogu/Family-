@@ -10,7 +10,6 @@ const categories = ['All', 'Fresh Produce', 'Family Meals', 'Pantry', 'Snacks', 
 
 function App() {
   const [hasEntered, setHasEntered] = useState(false)
-  const [isEntering, setIsEntering] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchTerm, setSearchTerm] = useState('')
   const [cartItems, setCartItems] = useState([])
@@ -54,16 +53,11 @@ function App() {
   }
 
   function handleEnterSite() {
-    setIsEntering(true)
-    window.requestAnimationFrame(() => {
-      setTimeout(() => {
-        setHasEntered(true)
-      }, 480)
-    })
+    setHasEntered(true)
   }
 
   if (!hasEntered) {
-    return <WelcomePage onEnter={handleEnterSite} isLeaving={isEntering} />
+    return <WelcomePage onEnter={handleEnterSite} />
   }
 
   return (
