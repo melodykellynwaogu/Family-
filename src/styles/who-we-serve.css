@@ -2,7 +2,7 @@
   position: relative;
   padding: 56px 0;
   background: #ffffff;
-  color: #000000;
+  color: #0b2402;
 }
 
 .who-we-serve__container {
@@ -16,7 +16,7 @@
   font-weight: 900;
   line-height: 1.1;
   margin: 0 0 48px;
-  color: #000000;
+  color: #0b2402;
 }
 
 .who-we-serve__content {
@@ -54,7 +54,7 @@
   font-weight: 800;
   line-height: 1.2;
   margin: 0 0 12px;
-  color: #000000;
+  color: #0b2402;
 }
 
 .who-we-serve__segment-description {
@@ -63,6 +63,14 @@
   margin: 0;
   color: rgba(0, 0, 0, 0.7);
   max-width: 580px;
+}
+
+.who-we-serve__visuals .serve {
+  width: 100%;
+  max-width: 490px;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
 }
 
 .who-we-serve__cta {

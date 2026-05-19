@@ -2,6 +2,7 @@ import { useState, lazy, Suspense } from 'react'
 import WelcomePage from './components/WelcomePage'
 import Header from './components/Header'
 import WhoWeServe from './components/WhoWeServe'
+import Price from './components/Price'
 const Hero = lazy(() => import('./components/Hero'))
 const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
 const CartSidebar = lazy(() => import('./components/CartSidebar'))
@@ -61,6 +62,7 @@ function App() {
       </Suspense>
 
       <WhoWeServe />
+      <Price />
 
       <main className="shop-layout">
         <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>

@@ -1,18 +1,19 @@
 import '../styles/who-we-serve.css';
+import familyImage from '../assets/family-ag1.avif';
 
 export default function WhoWeServe() {
   const segments = [
     {
-      title: 'Grocery retailers of all sizes',
+      title: 'Families and everyday shoppers',
       description:
-        'Wave Grocery serves both local grocery chains and high-volume national retailers, adapting to their unique needs and streamlining their operations.',
-      icon: 'supermarket',
+        'Family Fair Supermarket welcomes individuals, families, and communities looking for fresh groceries, household essentials, and affordable everyday products in a friendly shopping environment.',
+      // icon: 'supermarket',
     },
     {
-      title: 'Any industry that needs fast, recurring deliveries',
+      title: 'Customers who enjoy in-store shopping experiences',
       description:
-        'Some products must arrive on time, whether OTC medication, pet food, party liquor, or fresh goods. Wave Grocery helps businesses set up a great online store and deliver efficiently.',
-      icon: 'specialty',
+        'We focus on creating a clean, convenient, and enjoyable supermarket experience that encourages customers to regularly visit both our website and physical store to discover quality products, special offers, and new arrivals.',
+      // icon: 'specialty',
       cta: true,
     },
   ];
@@ -24,61 +25,7 @@ export default function WhoWeServe() {
 
         <div className="who-we-serve__content">
           <div className="who-we-serve__visuals">
-            <svg
-              className="who-we-serve__illustration"
-              viewBox="0 0 500 600"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              {/* Background circle */}
-              <circle cx="250" cy="300" r="200" fill="rgba(34, 197, 94, 0.08)" />
-
-              {/* Supermarket */}
-              <g>
-                <rect x="80" y="120" width="120" height="140" fill="none" stroke="#000" strokeWidth="2" />
-                <rect x="95" y="135" width="30" height="50" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="130" y="135" width="30" height="50" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="95" y="195" width="30" height="50" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="130" y="195" width="30" height="50" fill="none" stroke="#000" strokeWidth="1.5" />
-                <circle cx="160" cy="150" r="12" fill="none" stroke="#16a34a" strokeWidth="2" />
-                <path d="M 150 160 L 170 160" stroke="#16a34a" strokeWidth="2" />
-
-                <text x="122" y="90" fontSize="12" fontWeight="bold" textAnchor="middle">
-                  SUPERMARKET
-                </text>
-              </g>
-
-              {/* Specialty Shop */}
-              <g>
-                <rect x="280" y="140" width="110" height="100" fill="none" stroke="#000" strokeWidth="2" />
-                <path d="M 285 145 L 320 120 L 355 145 L 390 145 Z" fill="none" stroke="#16a34a" strokeWidth="2" />
-                <rect x="295" y="160" width="15" height="25" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="320" y="160" width="15" height="25" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="345" y="160" width="15" height="25" fill="none" stroke="#000" strokeWidth="1.5" />
-                <circle cx="345" cy="165" r="4" fill="#16a34a" />
-
-                <text x="335" y="115" fontSize="12" fontWeight="bold" textAnchor="middle">
-                  SPECIALTY SHOP
-                </text>
-              </g>
-
-              {/* Wholesale */}
-              <g>
-                <rect x="120" y="350" width="190" height="120" fill="none" stroke="#000" strokeWidth="2" />
-                <rect x="135" y="365" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="165" y="365" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="195" y="365" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="225" y="365" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="135" y="410" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="165" y="410" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="195" y="410" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <rect x="225" y="410" width="25" height="35" fill="none" stroke="#000" strokeWidth="1.5" />
-                <line x1="120" y1="355" x2="310" y2="355" stroke="#16a34a" strokeWidth="3" />
-
-                <text x="215" y="330" fontSize="12" fontWeight="bold" textAnchor="middle">
-                  WHOLESALE
-                </text>
-              </g>
-            </svg>
+            <img src={familyImage} alt="Family" className='serve' />
           </div>
 
           <div className="who-we-serve__segments">
