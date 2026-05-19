@@ -19,6 +19,8 @@ export default function Price() {
       description:
         'As we continue to grow, our goal remains simple — provide fresh products, trusted service, and a modern supermarket experience for our local community.',
       icon: svg4Image,
+
+      cta: true,
     },
   ];
 
@@ -41,6 +43,12 @@ export default function Price() {
               <p className="price__description">
                 {item.description}
               </p>
+
+              {item.cta && (
+                <a href="#" className="price__cta">
+                  Get started <span className="price__arrow">→</span>
+                </a>
+              )}
             </div>
           ))}
         </div>

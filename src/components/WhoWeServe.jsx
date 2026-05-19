@@ -7,13 +7,11 @@ export default function WhoWeServe() {
       title: 'Families and everyday shoppers',
       description:
         'Family Fair Supermarket welcomes individuals, families, and communities looking for fresh groceries, household essentials, and affordable everyday products in a friendly shopping environment.',
-      // icon: 'supermarket',
     },
     {
       title: 'Customers who enjoy in-store shopping experiences',
       description:
         'We focus on creating a clean, convenient, and enjoyable supermarket experience that encourages customers to regularly visit both our website and physical store to discover quality products, special offers, and new arrivals.',
-      // icon: 'specialty',
       cta: true,
     },
   ];

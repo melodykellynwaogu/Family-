@@ -25,25 +25,25 @@
   gap: 28px;
 }
 
-.price__item {
+/* .price__item {
   background: #ffffff;
   border-radius: 24px;
   padding: 28px;
   border: 1px solid rgba(11, 36, 2, 0.08);
   transition: transform 200ms ease, box-shadow 200ms ease;
-}
+} */
 
-.price__item:hover {
+/* .price__item:hover {
   transform: translateY(-4px);
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-}
+} */
 
-.price__image-wrapper {
+/* .price__image-wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
   margin-bottom: 24px;
-}
+} */
 
 .price__image {
   width: 100%;
@@ -57,6 +57,27 @@
   line-height: 1.8;
   color: rgba(0, 0, 0, 0.72);
   margin: 0;
+}
+
+.price__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #16a34a;
+  text-decoration: none;
+  transition: gap 200ms ease;
+}
+
+.price__cta:hover {
+  gap: 12px;
+}
+
+.price__arrow {
+  display: inline-block;
+  font-size: 1.2rem;
 }
 
 /* Tablet */
