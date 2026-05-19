@@ -6,10 +6,11 @@
   gap: 30px;
   align-items: center;
   padding: 56px;
-  border-radius: 36px;
+  border-radius: 0;
   min-height: min(860px, calc(100vh - 64px));
+  margin-top: 64px;
   color: #ffffff;
-  background: #0b1220;
+  background: #000000;
 }
 
 .hero__background,
@@ -27,9 +28,7 @@
 }
 
 .hero__backdrop {
-  background: radial-gradient(circle at top left, rgba(16, 185, 129, 0.22), transparent 20%),
-    radial-gradient(circle at 85% 16%, rgba(239, 68, 68, 0.15), transparent 18%),
-    linear-gradient(180deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.88));
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
 }
 
 .hero__content {

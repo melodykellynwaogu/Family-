@@ -1,0 +1,138 @@
+.who-we-serve {
+  position: relative;
+  padding: 56px 0;
+  background: #ffffff;
+  color: #000000;
+}
+
+.who-we-serve__container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.who-we-serve__title {
+  font-size: clamp(2.4rem, 3.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 0 0 48px;
+  color: #000000;
+}
+
+.who-we-serve__content {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.who-we-serve__visuals {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.who-we-serve__illustration {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+}
+
+.who-we-serve__segments {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.who-we-serve__segment {
+  padding: 0;
+}
+
+.who-we-serve__segment-title {
+  font-size: clamp(1.3rem, 2vw, 1.8rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #000000;
+}
+
+.who-we-serve__segment-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+  color: rgba(0, 0, 0, 0.7);
+  max-width: 580px;
+}
+
+.who-we-serve__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #16a34a;
+  text-decoration: none;
+  transition: gap 200ms ease;
+}
+
+.who-we-serve__cta:hover {
+  gap: 12px;
+}
+
+.who-we-serve__arrow {
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1080px) {
+  .who-we-serve {
+    padding: 40px 0;
+  }
+
+  .who-we-serve__container {
+    padding: 0 16px;
+  }
+
+  .who-we-serve__content {
+    gap: 32px;
+  }
+
+  .who-we-serve__title {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 720px) {
+  .who-we-serve {
+    padding: 32px 0;
+  }
+
+  .who-we-serve__content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .who-we-serve__visuals {
+    min-height: 300px;
+  }
+
+  .who-we-serve__segments {
+    gap: 28px;
+  }
+
+  .who-we-serve__title {
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
+    margin-bottom: 28px;
+  }
+
+  .who-we-serve__segment-title {
+    font-size: 1.2rem;
+  }
+
+  .who-we-serve__segment-description {
+    font-size: 0.95rem;
+  }
+}

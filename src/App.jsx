@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense } from 'react'
 import WelcomePage from './components/WelcomePage'
 import Header from './components/Header'
+import WhoWeServe from './components/WhoWeServe'
 const Hero = lazy(() => import('./components/Hero'))
 const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
 const CartSidebar = lazy(() => import('./components/CartSidebar'))
@@ -53,11 +54,13 @@ function App() {
 
   return (
     <div className="family-fair-app">
-      <Header />
+      <Header onSelectCategory={setSelectedCategory} />
 
       <Suspense fallback={<div className="hero-skeleton" /> }>
         <Hero onSelectCategory={setSelectedCategory} />
       </Suspense>
+
+      <WhoWeServe />
 
       <main className="shop-layout">
         <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>
