@@ -1,6 +1,9 @@
-import '../page/contacts.css';
+import { useNavigate } from 'react-router-dom';
+import '../styles/contact.css';
 
 export default function Contacts() {
+  const navigate = useNavigate();
+
   return (
     <section className="contacts">
       <div className="contacts__container">
@@ -16,6 +19,14 @@ export default function Contacts() {
             Visit Family Fair <br />
             Supermarket Today
           </h1>
+
+          <button
+            type="button"
+            className="contacts__back-btn"
+            onClick={() => navigate('/')}
+          >
+            Go back to homepage
+          </button>
 
           <div className="contacts__points">
             <div className="contacts__point">

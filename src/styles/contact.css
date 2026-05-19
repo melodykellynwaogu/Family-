@@ -1,7 +1,8 @@
 .contacts {
   min-height: 100vh;
-  background: #f4f2ee;
-  padding: 60px 20px;
+  background: #f3f1eb;
+  padding: 72px 24px;
+  overflow: hidden;
 }
 
 .contacts__container {
@@ -9,30 +10,40 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 72px;
   align-items: center;
 }
 
+/* LEFT SIDE */
+
+.contacts__logo {
+  margin-bottom: 42px;
+}
+
 .contacts__logo h2 {
-  font-size: 2rem;
-  font-weight: 900;
   margin: 0;
+  font-size: 2.4rem;
+  line-height: 0.9;
+  font-weight: 900;
   color: #0b2402;
+  letter-spacing: -2px;
 }
 
 .contacts__logo span {
-  font-size: 0.9rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 800;
   letter-spacing: 2px;
   color: #15803d;
 }
 
 .contacts__title {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.05;
+  font-size: clamp(3.2rem, 5vw, 5.3rem);
+  line-height: 1.02;
+  letter-spacing: -2px;
   font-weight: 900;
-  margin: 40px 0 32px;
   color: #0b2402;
+  max-width: 620px;
+  margin: 0 0 42px;
 }
 
 .contacts__points {
@@ -43,66 +54,101 @@
 
 .contacts__point {
   display: flex;
-  gap: 14px;
   align-items: flex-start;
+  gap: 14px;
 }
 
 .contacts__point span {
-  color: #15803d;
-  font-size: 1.2rem;
-  font-weight: bold;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #0b2402;
+  flex-shrink: 0;
 }
 
 .contacts__point p {
   margin: 0;
-  font-size: 1.05rem;
-  color: rgba(0, 0, 0, 0.72);
+  font-size: 1.08rem;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.8);
 }
 
+/* TESTIMONIAL */
+
 .contacts__testimonial {
-  margin-top: 40px;
-  background: white;
-  border-radius: 20px;
-  padding: 28px;
+  margin-top: 42px;
+  background: rgba(255,255,255,0.7);
   border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 20px;
+  padding: 26px;
+  max-width: 520px;
+  backdrop-filter: blur(10px);
 }
 
 .contacts__testimonial h3 {
+  margin: 0 0 10px;
   font-size: 3rem;
+  line-height: 1;
   color: #16a34a;
-  margin: 0 0 12px;
 }
 
 .contacts__testimonial p {
-  line-height: 1.7;
+  margin: 0;
+  line-height: 1.65;
   color: rgba(0,0,0,0.75);
+  font-size: 1rem;
 }
 
 .contacts__testimonial h4 {
-  margin: 24px 0 4px;
+  margin: 22px 0 4px;
+  font-size: 1.15rem;
   color: #0b2402;
 }
 
 .contacts__testimonial span {
-  color: rgba(0,0,0,0.6);
+  color: rgba(0,0,0,0.55);
+  font-size: 0.95rem;
 }
 
-.contacts__right {
-  background:
-    radial-gradient(circle at top right, rgba(34,197,94,0.45), transparent 35%),
-    radial-gradient(circle at bottom left, rgba(34,197,94,0.3), transparent 30%),
-    #063b1d;
+/* RIGHT SIDE FORM */
 
-  padding: 40px;
-  border-radius: 32px;
+.contacts__right {
   position: relative;
+  border-radius: 34px;
+  padding: 42px;
   overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(34,197,94,0.35), transparent 30%),
+    radial-gradient(circle at bottom left, rgba(34,197,94,0.25), transparent 35%),
+    linear-gradient(135deg, #03240f 0%, #064e2a 100%);
+  box-shadow:
+    0 20px 80px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* subtle texture */
+.contacts__right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 4px 4px;
+  opacity: 0.18;
+  pointer-events: none;
 }
 
 .contacts__form {
+  position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 20px;
 }
 
 .contacts__row {
@@ -114,65 +160,100 @@
 .contacts__group {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 
 .contacts__group label {
-  color: white;
+  color: rgba(255,255,255,0.92);
+  font-size: 0.92rem;
   font-weight: 600;
-  font-size: 0.95rem;
 }
 
 .contacts__group input,
 .contacts__group select {
-  height: 54px;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  padding: 0 16px;
-  font-size: 1rem;
-}
-
-.contacts__btn {
   height: 56px;
   border: none;
+  border-radius: 12px;
+  padding: 0 16px;
+  outline: none;
+  background: #f4f4f4;
+  font-size: 1rem;
+  color: #111;
+}
+
+.contacts__group input:focus,
+.contacts__group select:focus {
+  box-shadow: 0 0 0 3px rgba(34,197,94,0.3);
+}
+
+/* BUTTON */
+
+.contacts__btn {
+  width: fit-content;
+  padding: 16px 28px;
+  border: none;
   border-radius: 14px;
-  background: #16a34a;
+  background: #22c55e;
   color: white;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 800;
   cursor: pointer;
-  transition: 200ms ease;
+  transition: all 200ms ease;
+  margin-top: 8px;
 }
 
 .contacts__btn:hover {
   transform: translateY(-2px);
-  background: #15803d;
+  background: #16a34a;
 }
 
 .contacts__terms {
-  color: rgba(255,255,255,0.7);
+  margin: 0;
+  font-size: 0.85rem;
   line-height: 1.6;
-  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
 }
 
-/* Mobile */
-@media (max-width: 920px) {
 
+.contacts__back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #16a34a;
+  border: 12px solid transparent;
+  border-radius: 10px;
+  color: rgba(13, 13, 13, 0.8);
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 200ms ease;
+  font-family: fantasy;
+}
+
+/* TABLET */
+
+@media (max-width: 980px) {
   .contacts__container {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 54px;
   }
 
   .contacts__title {
-    margin-top: 24px;
+    max-width: 100%;
   }
 }
+
+/* MOBILE */
 
 @media (max-width: 640px) {
 
   .contacts {
-    padding: 40px 16px;
+    padding: 42px 16px;
+  }
+
+  .contacts__title {
+    font-size: 2.5rem;
+    letter-spacing: -1px;
   }
 
   .contacts__right {
@@ -184,7 +265,11 @@
     grid-template-columns: 1fr;
   }
 
-  .contacts__title {
-    font-size: 2.4rem;
+  .contacts__testimonial {
+    padding: 22px;
+  }
+
+  .contacts__point p {
+    font-size: 1rem;
   }
 }

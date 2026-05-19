@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../styles/price.css';
 import svg2Image from '../assets/family-ag4.svg';
 import svg3Image from '../assets/family-ag3.svg';
@@ -45,9 +46,9 @@ export default function Price() {
               </p>
 
               {item.cta && (
-                <a href="#" className="price__cta">
-                  Get started <span className="price__arrow">→</span>
-                </a>
+                <Link to="/products" className="price__cta">
+                  See our products prices <span className="price__arrow">→</span>
+                </Link>
               )}
             </div>
           ))}

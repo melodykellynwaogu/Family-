@@ -1,8 +1,11 @@
 import { useState, lazy, Suspense } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import WelcomePage from './components/WelcomePage'
 import Header from './components/Header'
 import WhoWeServe from './components/WhoWeServe'
 import Price from './components/Price'
+import ContactPage from './page/Contact.jsx'
+import ProductsPage from './page/ProductsPage.jsx'
 const Hero = lazy(() => import('./components/Hero'))
 const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
 const CartSidebar = lazy(() => import('./components/CartSidebar'))
@@ -49,11 +52,7 @@ function App() {
     setHasEntered(true)
   }
 
-  if (!hasEntered) {
-    return <WelcomePage onEnter={handleEnterSite} />
-  }
-
-  return (
+  const appContent = (
     <div className="family-fair-app">
       <Header onSelectCategory={setSelectedCategory} />
 
@@ -64,7 +63,7 @@ function App() {
       <WhoWeServe />
       <Price />
 
-      <main className="shop-layout">
+      {/* <main className="shop-layout">
         <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>
           <ProductsPanel
             selectedCategory={selectedCategory}
@@ -78,7 +77,7 @@ function App() {
         <Suspense fallback={<div className="cart-skeleton"/>}>
           <CartSidebar cartItems={cartItems} total={total} onRemove={handleRemove} onClear={handleClear} />
         </Suspense>
-      </main>
+      </main> */}
 
       <footer className="footer-banner">
         <div>
@@ -89,6 +88,17 @@ function App() {
 
       <div className="cart-summary">{cartCount} item{cartCount === 1 ? '' : 's'} in cart</div>
     </div>
+  )
+
+  return (
+    <Routes>
+      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/products" element={<ProductsPage />} />
+      <Route
+        path="/*"
+        element={hasEntered ? appContent : <WelcomePage onEnter={handleEnterSite} />}
+      />
+    </Routes>
   )
 }
 

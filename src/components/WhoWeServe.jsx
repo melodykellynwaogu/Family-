@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../styles/who-we-serve.css';
 import familyImage from '../assets/family-ag1.avif';
 
@@ -32,9 +33,9 @@ export default function WhoWeServe() {
                 <h3 className="who-we-serve__segment-title">{segment.title}</h3>
                 <p className="who-we-serve__segment-description">{segment.description}</p>
                 {segment.cta && (
-                  <a href="#" className="who-we-serve__cta">
+                  <Link to="/contact" className="who-we-serve__cta">
                     Get started <span className="who-we-serve__arrow">→</span>
-                  </a>
+                  </Link>
                 )}
               </div>
             ))}
