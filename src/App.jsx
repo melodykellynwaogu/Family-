@@ -4,8 +4,10 @@ import WelcomePage from './components/WelcomePage'
 import Header from './components/Header'
 import WhoWeServe from './components/WhoWeServe'
 import Price from './components/Price'
+import Promotions from './components/Promotions'
 import ContactPage from './page/Contact.jsx'
 import ProductsPage from './page/ProductsPage.jsx'
+import ProductDetail from './page/ProductDetail.jsx'
 const Hero = lazy(() => import('./components/Hero'))
 const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
 const CartSidebar = lazy(() => import('./components/CartSidebar'))
@@ -62,8 +64,9 @@ function App() {
 
       <WhoWeServe />
       <Price />
+      <Promotions />
 
-      {/* <main className="shop-layout">
+      <main className="shop-layout">
         <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>
           <ProductsPanel
             selectedCategory={selectedCategory}
@@ -77,7 +80,7 @@ function App() {
         <Suspense fallback={<div className="cart-skeleton"/>}>
           <CartSidebar cartItems={cartItems} total={total} onRemove={handleRemove} onClear={handleClear} />
         </Suspense>
-      </main> */}
+      </main>
 
       <footer className="footer-banner">
         <div>
@@ -94,6 +97,7 @@ function App() {
     <Routes>
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/products" element={<ProductsPage />} />
+      <Route path="/product/:productId" element={<ProductDetail onAdd={handleAdd} />} />
       <Route
         path="/*"
         element={hasEntered ? appContent : <WelcomePage onEnter={handleEnterSite} />}

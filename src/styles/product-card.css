@@ -8,6 +8,13 @@
   background: rgba(255, 255, 255, 0.94);
   color: #0f172a;
   box-shadow: 0 22px 48px rgba(15, 23, 42, 0.12);
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 32px 64px rgba(15, 23, 42, 0.2);
+  border-color: rgba(22, 163, 74, 0.3);
 }
 
 .product-card__badge {

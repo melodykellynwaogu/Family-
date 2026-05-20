@@ -1,8 +1,37 @@
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 import '../styles/contact.css';
 
 export default function Contacts() {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    city: '',
+    country: 'Malawi',
+  });
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Contact Form Submitted:', formData);
+    localStorage.setItem('contactSubmissions', JSON.stringify([
+      ...JSON.parse(localStorage.getItem('contactSubmissions') || '[]'),
+      { ...formData, timestamp: new Date().toISOString() }
+    ]));
+    setSubmitted(true);
+    setFormData({ fullName: '', email: '', phone: '', city: '', country: 'Malawi' });
+    setTimeout(() => setSubmitted(false), 5000);
+  };
 
   return (
     <section className="contacts">
@@ -67,35 +96,69 @@ export default function Contacts() {
 
         <div className="contacts__right">
 
-          <form className="contacts__form">
+          <form className="contacts__form" onSubmit={handleSubmit}>
+
+            {submitted && (
+              <div className="contacts__success-message">
+                ✓ Thank you! We've received your information and will contact you soon.
+              </div>
+            )}
 
             <div className="contacts__group">
               <label>Full name</label>
-              <input type="text" />
+              <input 
+                type="text" 
+                name="fullName"
+                value={formData.fullName}
+                onChange={handleInputChange}
+                required
+              />
             </div>
 
             <div className="contacts__row">
               <div className="contacts__group">
                 <label>Email</label>
-                <input type="email" />
+                <input 
+                  type="email" 
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
 
               <div className="contacts__group">
                 <label>Phone</label>
-                <input type="text" />
+                <input 
+                  type="text" 
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
             </div>
 
             <div className="contacts__row">
               <div className="contacts__group">
                 <label>City</label>
-                <input type="text" />
+                <input 
+                  type="text" 
+                  name="city"
+                  value={formData.city}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
 
               <div className="contacts__group">
                 <label>Country</label>
 
-                <select>
+                <select
+                  name="country"
+                  value={formData.country}
+                  onChange={handleInputChange}
+                >
                   <option>Malawi</option>
                   <option>Nigeria</option>
                   <option>South Africa</option>
