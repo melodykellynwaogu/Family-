@@ -5,6 +5,9 @@ import Header from './components/Header'
 import WhoWeServe from './components/WhoWeServe'
 import Price from './components/Price'
 import Promotions from './components/Promotions'
+import Categories from './components/Categories'
+import StoreInfo from './components/StoreInfo'
+import Testimonials from './components/Testimonials'
 import ContactPage from './page/Contact.jsx'
 import ProductsPage from './page/ProductsPage.jsx'
 import ProductDetail from './page/ProductDetail.jsx'
@@ -65,8 +68,11 @@ function App() {
       <WhoWeServe />
       <Price />
       <Promotions />
+      <Categories />
+      <StoreInfo />
+      <Testimonials />
 
-      <main className="shop-layout">
+      <main id="products-section" className="shop-layout">
         <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>
           <ProductsPanel
             selectedCategory={selectedCategory}

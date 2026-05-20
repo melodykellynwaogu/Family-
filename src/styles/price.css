@@ -25,26 +25,6 @@
   gap: 28px;
 }
 
-/* .price__item {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 28px;
-  border: 1px solid rgba(11, 36, 2, 0.08);
-  transition: transform 200ms ease, box-shadow 200ms ease;
-} */
-
-/* .price__item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-} */
-
-/* .price__image-wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-} */
-
 .price__image {
   width: 100%;
   max-width: 220px;

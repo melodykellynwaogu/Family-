@@ -68,9 +68,13 @@ export default function ProductDetail({ onAdd }) {
           {/* Large Image */}
           <div className="product-detail__image-wrapper">
             <div className="product-detail__image">
-              <div className="product-detail__placeholder">
-                {product.name}
-              </div>
+              {product.image ? (
+                <img src={product.image} alt={product.name} />
+              ) : (
+                <div className="product-detail__placeholder">
+                  {product.name}
+                </div>
+              )}
             </div>
           </div>
 

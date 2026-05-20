@@ -80,6 +80,36 @@
 
 /* TESTIMONIAL */
 
+.contacts__store {
+  margin-top: 32px;
+  padding: 24px;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(22, 101, 52, 0.12);
+  border-radius: 20px;
+}
+
+.contacts__store h3 {
+  margin: 0 0 14px;
+  font-size: 1.15rem;
+  color: #0b2402;
+}
+
+.contacts__store p {
+  margin: 0.85rem 0;
+  color: rgba(0,0,0,0.75);
+  line-height: 1.7;
+}
+
+.contacts__store a {
+  color: #0f5132;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.contacts__store a:hover {
+  text-decoration: underline;
+}
+
 .contacts__testimonial {
   margin-top: 42px;
   background: rgba(255,255,255,0.7);

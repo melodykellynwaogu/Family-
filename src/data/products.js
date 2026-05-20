@@ -5,6 +5,7 @@ const products = [
     category: 'Body Produce',
     price: 4.5,
     unit: 'per bottle',
+    image: '/nivea.jpeg',
     description: 'Feel the softness of Nivea creams on your skin. Our range of body creams is designed to provide deep hydration and nourishment, leaving your skin feeling silky smooth and refreshed. Whether you prefer a light lotion or a rich butter, our Nivea body creams are perfect for keeping your skin moisturized and healthy all day long.',
   },
   {

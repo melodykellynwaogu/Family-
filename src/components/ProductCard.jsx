@@ -12,6 +12,11 @@ function ProductCard({ product, onAdd, isClickable = true }) {
 
   return (
     <article className="product-card" onClick={handleCardClick} style={isClickable ? { cursor: 'pointer' } : {}}>
+      {product.image && (
+        <div className="product-card__image">
+          <img src={product.image} alt={product.name} />
+        </div>
+      )}
       <div className="product-card__badge">{product.category}</div>
       <div className="product-card__name">{product.name}</div>
       <p className="product-card__description">{product.description}</p>
