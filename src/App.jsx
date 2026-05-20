@@ -8,6 +8,9 @@ import Promotions from './components/Promotions'
 import Categories from './components/Categories'
 import StoreInfo from './components/StoreInfo'
 import Testimonials from './components/Testimonials'
+import LoyaltyMembership from './components/LoyaltyMembership'
+import NewsletterSubscription from './components/NewsletterSubscription'
+import ModernFooter from './components/ModernFooter'
 import ContactPage from './page/Contact.jsx'
 import ProductsPage from './page/ProductsPage.jsx'
 import ProductDetail from './page/ProductDetail.jsx'
@@ -15,8 +18,6 @@ const Hero = lazy(() => import('./components/Hero'))
 const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
 const CartSidebar = lazy(() => import('./components/CartSidebar'))
 import './App.css'
-
-const categories = ['All', 'Fresh Produce', 'Family Meals', 'Pantry', 'Snacks', 'Dairy']
 
 function App() {
   const [hasEntered, setHasEntered] = useState(false)
@@ -71,6 +72,8 @@ function App() {
       <Categories />
       <StoreInfo />
       <Testimonials />
+      <LoyaltyMembership />
+      <NewsletterSubscription />
 
       <main id="products-section" className="shop-layout">
         <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>
@@ -88,12 +91,7 @@ function App() {
         </Suspense>
       </main>
 
-      <footer className="footer-banner">
-        <div>
-          <h2>Family Fair is built for modern grocery shopping.</h2>
-          <p>From breakfast staples to family meal kits, every item is selected for quality and convenience.</p>
-        </div>
-      </footer>
+      <ModernFooter />
 
       <div className="cart-summary">{cartCount} item{cartCount === 1 ? '' : 's'} in cart</div>
     </div>

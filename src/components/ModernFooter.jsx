@@ -1,0 +1,69 @@
+import '../styles/modern-footer.css'
+
+const quickLinks = [
+  { label: 'Home', href: '#' },
+  { label: 'Products', href: '/products' },
+  { label: 'Membership', href: '#membership' },
+  { label: 'Newsletter', href: '#newsletter' },
+]
+
+const categories = ['Fresh Produce', 'Dairy', 'Snacks', 'Beverages']
+
+export default function ModernFooter() {
+  return (
+    <footer className="modern-footer" id="footer">
+      <div className="modern-footer__container">
+        <div className="modern-footer__brand">
+          <h2>Family Fair Supermarket</h2>
+          <p>
+            Trusted by local families for fresh groceries, practical deals, and a friendly shopping experience.
+          </p>
+        </div>
+
+        <div className="modern-footer__grid">
+          <div>
+            <h3>Quick links</h3>
+            <ul>
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <a href={link.href}>{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3>Popular categories</h3>
+            <ul>
+              {categories.map((category) => (
+                <li key={category}>{category}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3>Visit us</h3>
+            <ul>
+              <li>123 Market Lane, Lilongwe</li>
+              <li>Open daily: 7:00 AM - 9:00 PM</li>
+              <li>
+                <a href="tel:+265888123456">+265 888 123 456</a>
+              </li>
+              <li>
+                <a href="mailto:hello@familyfair.store">hello@familyfair.store</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="modern-footer__bottom">
+          <p>© 2026 Family Fair Supermarket. All rights reserved.</p>
+          <div className="modern-footer__socials">
+            <a href="https://www.instagram.com/familyfair2026" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}
