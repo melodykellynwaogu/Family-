@@ -1,10 +1,12 @@
 import '../styles/modern-footer.css'
 
 const quickLinks = [
-  { label: 'Home', href: '#' },
-  { label: 'Products', href: '/products' },
-  { label: 'Membership', href: '#membership' },
-  { label: 'Newsletter', href: '#newsletter' },
+  { label: 'Home', href: '/#home' },
+  { label: 'Deals', href: '/#deals' },
+  { label: 'Categories', href: '/#categories' },
+  { label: 'Products', href: '/#products-section' },
+  { label: 'Membership', href: '/#membership' },
+  { label: 'Newsletter', href: '/#newsletter' },
 ]
 
 const categories = ['Fresh Produce', 'Dairy', 'Snacks', 'Beverages']

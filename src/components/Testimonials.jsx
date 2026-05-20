@@ -2,25 +2,25 @@ import '../styles/testimonials.css'
 
 const testimonials = [
   {
-    quote: 'Family Fair makes grocery shopping a breeze. The quality is always excellent and so easy.',
+    quote: 'Family Fair makes grocery shopping easy for my whole family. Produce is always fresh.',
     name: 'Martha K.',
-    role: 'Busy Lady',
+    role: 'Busy Parent',
   },
   {
-    quote: 'Our pantry is stocked with fresh produce and family favourites thanks to their great selection.',
+    quote: 'Great selection and fair prices. I always find what I need for weekly meal prep.',
     name: 'James P.',
-    role: 'Chef & Home Cook',
+    role: 'Home Chef',
   },
   {
-    quote: 'I love the deals and the simple checkout experience. Great value and fast service every time.',
+    quote: 'The promotions are excellent and staff are friendly. It feels like a community store.',
     name: 'Leah N.',
-    role: 'Health Enthusiast',
+    role: 'Regular Shopper',
   },
 ]
 
 export default function Testimonials() {
   return (
-    <section className="testimonials">
+    <section className="testimonials" id="testimonials">
       <div className="testimonials__wrapper">
         <div className="testimonials__intro">
           <p className="testimonials__eyebrow">What customers say</p>

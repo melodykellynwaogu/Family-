@@ -62,7 +62,7 @@ function App() {
     <div className="family-fair-app">
       <Header onSelectCategory={setSelectedCategory} />
 
-      <Suspense fallback={<div className="hero-skeleton" /> }>
+      <Suspense fallback={<div className="hero-skeleton" />}>
         <Hero onSelectCategory={setSelectedCategory} />
       </Suspense>
 
@@ -70,10 +70,6 @@ function App() {
       <Price />
       <Promotions />
       <Categories />
-      <StoreInfo />
-      <Testimonials />
-      <LoyaltyMembership />
-      <NewsletterSubscription />
 
       <main id="products-section" className="shop-layout">
         <Suspense fallback={<div className="panel-skeleton">Loading shop…</div>}>
@@ -86,11 +82,15 @@ function App() {
           />
         </Suspense>
 
-        <Suspense fallback={<div className="cart-skeleton"/>}>
+        <Suspense fallback={<div className="cart-skeleton" />}>
           <CartSidebar cartItems={cartItems} total={total} onRemove={handleRemove} onClear={handleClear} />
         </Suspense>
       </main>
 
+      <StoreInfo />
+      <Testimonials />
+      <LoyaltyMembership />
+      <NewsletterSubscription />
       <ModernFooter />
 
       <div className="cart-summary">{cartCount} item{cartCount === 1 ? '' : 's'} in cart</div>

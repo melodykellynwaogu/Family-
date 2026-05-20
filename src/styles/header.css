@@ -3,10 +3,9 @@
   inset: 0 0 auto 0;
   width: 100%;
   z-index: 100;
-  pointer-events: auto;
-  background: rgba(15, 23, 42, 0.95);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(34, 197, 94, 0.2);
+  background: rgba(8, 16, 10, 0.88);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(163, 230, 53, 0.22);
 }
 
 .ff-header__inner {
@@ -14,105 +13,83 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  gap: 28px;
-  padding: 18px 20px;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 20px;
 }
 
-.ff-header__right {
-  display: flex;
+.ff-brand {
+  display: inline-flex;
   align-items: center;
-  gap: 24px;
+  gap: 10px;
+  text-decoration: none;
+  color: #f0fdf4;
+}
+
+.ff-brand__mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  font-size: 0.88rem;
+  background: linear-gradient(135deg, #a3e635, #4ade80);
+  color: #0f1f12;
+}
+
+.ff-brand__name {
+  font-weight: 800;
+  letter-spacing: 0.02em;
 }
 
 .ff-header__nav {
   display: flex;
-  gap: 24px;
   align-items: center;
-  position: relative;
+  gap: 18px;
+}
+
+.ff-header__nav a {
+  color: rgba(236, 253, 245, 0.88);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.94rem;
+  transition: color 160ms ease;
+}
+
+.ff-header__nav a:hover {
+  color: #d9f99d;
+}
+
+.ff-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ff-cta {
+  border: none;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 9px 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #65a30d, #22c55e);
+  color: #041209;
+}
+
+.ff-cta--ghost {
+  background: transparent;
+  color: #f0fdf4;
+  border: 1px solid rgba(236, 253, 245, 0.32);
 }
 
 .ff-mobile-toggle {
   display: none;
 }
 
-.ff-nav-item {
-  position: relative;
-}
-
-.ff-nav-button {
-  background: transparent;
-  border: none;
-  color: rgba(255, 255, 255, 0.92);
-  font-weight: 700;
-  cursor: pointer;
-  padding: 8px 6px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.ff-nav-arrow {
-  font-size: 0.85rem;
-  opacity: 0.75;
-}
-
-.ff-dropdown {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  min-width: 220px;
-  background: rgba(15, 23, 42, 0.98);
-  border: 1px solid rgba(34, 197, 94, 0.2);
-  border-radius: 12px;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
-  padding: 12px 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  transition: opacity 180ms ease, transform 180ms ease;
-  z-index: 10;
-}
-
-.ff-dropdown--visible {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(4px);
-}
-
-.ff-dropdown button {
-  display: block;
-  width: 100%;
-  text-align: left;
-  border: none;
-  background: transparent;
-  color: #f8fafc;
-  padding: 12px 18px;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-.ff-dropdown button:hover {
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.ff-header__actions .ff-cta {
-  background: linear-gradient(135deg, #16a34a, #22c55e);
-  border: none;
-  color: #071126;
-  padding: 10px 22px;
-  border-radius: 999px;
-  font-weight: 800;
-  cursor: pointer;
-}
-
-@media (max-width: 880px) {
-  .ff-header__inner {
-    padding: 18px 14px;
-  }
-
+@media (max-width: 960px) {
   .ff-header__nav,
-  .ff-dropdown {
+  .ff-header__actions {
     display: none;
   }
 
@@ -120,25 +97,38 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.08);
-    color: #fff;
+    background: rgba(236, 253, 245, 0.1);
+    border: 1px solid rgba(236, 253, 245, 0.2);
+    color: #f0fdf4;
     padding: 8px 10px;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
   }
 
   .ff-mobile-menu {
     position: absolute;
-    right: 20px;
-    top: 64px;
-    background: rgba(10, 15, 25, 0.98);
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 12px;
+    right: 14px;
+    top: 62px;
+    background: rgba(10, 19, 12, 0.98);
+    border: 1px solid rgba(163, 230, 53, 0.22);
+    border-radius: 14px;
     padding: 12px;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    z-index: 14;
+    min-width: 220px;
+    z-index: 16;
+  }
+
+  .ff-mobile-menu a {
+    text-decoration: none;
+    color: #ecfdf5;
+    font-weight: 600;
+    padding: 10px 12px;
+    border-radius: 10px;
+  }
+
+  .ff-mobile-menu a:hover {
+    background: rgba(236, 253, 245, 0.09);
   }
 }

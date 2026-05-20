@@ -42,7 +42,7 @@ export default function Categories() {
   }
 
   return (
-    <section className="categories">
+    <section className="categories" id="categories">
       <div className="categories__container">
         <div className="categories__header">
           <p className="categories__eyebrow">Shop By Category</p>

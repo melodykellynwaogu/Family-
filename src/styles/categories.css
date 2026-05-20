@@ -1,6 +1,6 @@
 .categories {
   padding: 4rem 1.5rem;
-  background: linear-gradient(180deg, #faf9f6 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #f5faf4 0%, #ffffff 100%);
 }
 
 .categories__container {
@@ -9,7 +9,7 @@
 }
 
 .categories__eyebrow {
-  color: #4d4a47;
+  color: #22623a;
   font-size: 0.9rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -20,13 +20,13 @@
   font-size: clamp(2rem, 2.5vw, 3rem);
   margin: 0;
   line-height: 1.05;
-  color: #111;
+  color: #0d2513;
 }
 
 .categories__subtitle {
   margin-top: 1rem;
   max-width: 680px;
-  color: #5d5a55;
+  color: #4e6255;
   line-height: 1.7;
 }
 
@@ -42,7 +42,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  border: 1px solid rgba(30, 30, 30, 0.08);
+  border: 1px solid rgba(22, 101, 52, 0.12);
   border-radius: 24px;
   background: #fff;
   cursor: pointer;
@@ -53,8 +53,8 @@
 .categories__card:hover,
 .categories__card:focus-visible {
   transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(34, 41, 47, 0.08);
-  border-color: rgba(34, 41, 47, 0.14);
+  box-shadow: 0 18px 40px rgba(21, 37, 27, 0.08);
+  border-color: rgba(22, 101, 52, 0.28);
 }
 
 .categories__icon {
@@ -63,24 +63,24 @@
   display: grid;
   place-items: center;
   border-radius: 24px;
-  background: linear-gradient(180deg, #fffaef 0%, #ffe6c9 100%);
+  background: linear-gradient(180deg, #f2fde8 0%, #dcfce7 100%);
   font-size: 1.75rem;
 }
 
 .categories__card h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #141414;
+  color: #14311e;
 }
 
 .categories__card p {
   margin: 0.45rem 0 0;
-  color: #66615b;
+  color: #5b6d61;
   line-height: 1.65;
 }
 
 .categories__arrow {
   margin-left: auto;
-  color: #b9b1a6;
+  color: #6ea27a;
   font-size: 1.4rem;
 }

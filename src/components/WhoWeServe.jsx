@@ -18,7 +18,7 @@ export default function WhoWeServe() {
   ];
 
   return (
-    <section className="who-we-serve">
+    <section className="who-we-serve" id="who-we-serve">
       <div className="who-we-serve__container">
         <h2 className="who-we-serve__title">Who we serve</h2>
 

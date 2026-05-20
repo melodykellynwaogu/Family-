@@ -4,10 +4,10 @@
   width: 320px;
   padding: 22px;
   border-radius: 26px;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.98), rgba(30, 41, 59, 0.96));
-  border: 1px solid rgba(59, 130, 246, 0.16);
-  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.18);
-  color: #f8fafc;
+  background: linear-gradient(180deg, rgba(10, 24, 14, 0.98), rgba(17, 40, 24, 0.96));
+  border: 1px solid rgba(163, 230, 53, 0.24);
+  box-shadow: 0 24px 70px rgba(10, 24, 14, 0.28);
+  color: #f0fdf4;
 }
 
 .cart-sidebar__header {
@@ -16,10 +16,27 @@
   align-items: center;
 }
 
+.cart-sidebar__header h2 {
+  margin: 0;
+}
+
+.cart-sidebar__clear {
+  border: 1px solid rgba(190, 242, 100, 0.35);
+  background: rgba(190, 242, 100, 0.1);
+  color: #fef9c3;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .cart-sidebar__items {
   margin-top: 18px;
   display: grid;
   gap: 12px;
+}
+
+.cart-sidebar__empty {
+  color: rgba(236, 253, 245, 0.78);
 }
 
 .cart-item {
@@ -29,7 +46,7 @@
   align-items: center;
   padding: 14px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .cart-item__name {
@@ -37,14 +54,14 @@
 }
 
 .cart-item__quantity {
-  color: #cbd5e1;
+  color: rgba(236, 253, 245, 0.78);
   font-size: 0.95rem;
 }
 
 .cart-item__remove {
   border: none;
-  background: rgba(239, 68, 68, 0.15);
-  color: #fee2e2;
+  background: rgba(255, 255, 255, 0.16);
+  color: #f0fdf4;
   font-size: 1.25rem;
   width: 34px;
   height: 34px;
@@ -60,13 +77,13 @@
 }
 
 .cart-sidebar__total-label {
-  color: #94a3b8;
+  color: #d9f99d;
 }
 
 .cart-sidebar__total-value {
   font-weight: 800;
   font-size: 1.3rem;
-  color: #f8fafc;
+  color: #f0fdf4;
 }
 
 .cart-sidebar__checkout {
@@ -74,8 +91,8 @@
   margin-top: 16px;
   padding: 14px 18px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #16a34a, #22c55e);
-  color: #ffffff;
+  background: linear-gradient(135deg, #65a30d, #22c55e);
+  color: #03210d;
   border: none;
   font-weight: 800;
   cursor: pointer;
@@ -84,4 +101,12 @@
 .cart-sidebar__checkout:disabled {
   opacity: 0.55;
   cursor: not-allowed;
+}
+
+@media (max-width: 1200px) {
+  .cart-sidebar {
+    width: 100%;
+    position: relative;
+    top: auto;
+  }
 }

@@ -36,7 +36,7 @@ const promotions = [
 
 export default function Promotions() {
   return (
-    <section className="promotions">
+    <section className="promotions" id="deals">
       <div className="promotions__container">
         <div className="promotions__header">
           <div className="promotions__eyebrow">Weekly Deals</div>

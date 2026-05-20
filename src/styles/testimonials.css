@@ -1,6 +1,6 @@
 .testimonials {
   padding: 4rem 1.5rem;
-  background: #f7f6f2;
+  background: #f7fbf5;
 }
 
 .testimonials__wrapper {
@@ -15,7 +15,7 @@
 }
 
 .testimonials__eyebrow {
-  color: #4e4a45;
+  color: #2b6742;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -25,13 +25,13 @@
 .testimonials__title {
   font-size: clamp(2rem, 2.4vw, 2.75rem);
   margin: 0;
-  color: #0b2402;
+  color: #0d2513;
   line-height: 1.1;
 }
 
 .testimonials__copy {
   margin-top: 1rem;
-  color: #5f5b56;
+  color: #53675a;
   line-height: 1.75;
 }
 
@@ -44,20 +44,20 @@
 .testimonials__card {
   padding: 1.75rem;
   border-radius: 26px;
-  background: linear-gradient(180deg, #ffffff 0%, #fbfbfb 100%);
-  border: 1px solid rgba(84, 80, 74, 0.08);
-  box-shadow: 0 12px 32px rgba(60, 64, 72, 0.06);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbf6 100%);
+  border: 1px solid rgba(22, 101, 52, 0.1);
+  box-shadow: 0 12px 32px rgba(21, 37, 27, 0.07);
   transition: transform 220ms ease, border-color 220ms ease;
 }
 
 .testimonials__card:hover {
   transform: translateY(-3px);
-  border-color: rgba(84, 80, 74, 0.16);
+  border-color: rgba(22, 101, 52, 0.2);
 }
 
 .testimonials__quote {
   margin: 0 0 1.5rem;
-  color: #2e2a28;
+  color: #25342a;
   font-size: 1rem;
   line-height: 1.9;
 }
@@ -69,10 +69,10 @@
 }
 
 .testimonials__name {
-  color: #111;
+  color: #122318;
   font-weight: 700;
 }
 
 .testimonials__role {
-  color: #6a655e;
+  color: #5a6a5f;
 }

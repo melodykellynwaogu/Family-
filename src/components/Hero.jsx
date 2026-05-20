@@ -35,7 +35,7 @@ function Hero({ onSelectCategory, backgrounds = defaultBackgrounds }) {
   }, [currentBackground])
 
   return (
-    <section className="hero hero--showcase">
+    <section className="hero hero--showcase" id="home">
       <div className="hero__background" style={backgroundStyle} />
       <div className="hero__backdrop" />
 

@@ -81,9 +81,9 @@ export default function Contacts() {
 
           <div className="contacts__store">
             <h3>Store information</h3>
-            <p><strong>Address:</strong> 123 Market Lane, Lilongwe, Malawi</p>
-            <p><strong>Phone:</strong> <a href="tel:+265888123456">+265 888 123 456</a></p>
-            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/syrmaai?igsh=MXg0ZnJuZDZrZXp4eQ==" target="_blank" rel="noreferrer">@syrmaai</a></p>
+            <p><strong>Address:</strong> Area 36 Market Lane, Lilongwe, Malawi</p>
+            <p><strong>Phone:</strong> <a href="tel:+265888123456">+265 881146791</a></p>
+            <p><strong>Instagram:</strong> <a href="https://www.instagram.com/familyfair2026" target="_blank" rel="noreferrer">@familyfair</a></p>
             <p><strong>Hours:</strong> Mon–Fri 7am–9pm, Sat 8am–8pm, Sun 8:30am–6pm</p>
             <p><strong>Parking:</strong> Spacious customer parking with dedicated family bays.</p>
           </div>

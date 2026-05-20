@@ -2,8 +2,8 @@ import '../styles/store-info.css'
 
 const storeDetails = {
   name: 'Family Fair Supermarket',
-  address: '123 Market Lane, Lilongwe, Malawi',
-  phone: '+265 888 123 456',
+  address: 'Area 36 Market Lane, Lilongwe, Malawi',
+  phone: '+265 881 146 791',
   hours: [
     { day: 'Mon - Fri', time: '7:00 AM - 9:00 PM' },
     { day: 'Saturday', time: '8:00 AM - 8:00 PM' },
@@ -16,7 +16,7 @@ const storeDetails = {
 
 export default function StoreInfo() {
   return (
-    <section className="store-info">
+    <section className="store-info" id="store-info">
       <div className="store-info__container">
         <div className="store-info__header">
           <p className="store-info__eyebrow">Visit Our Store</p>

@@ -45,16 +45,6 @@ function WelcomePage({ onEnter }) {
   }, [hasScrolled, onEnter])
 
   const handleClick = () => {
-    // debug: expose a global flag and log so we can confirm the click reaches the handler
-    try {
-      // eslint-disable-next-line no-console
-      console.log('[welcome] Visit website clicked')
-      // add a quick visual hint for local testing
-      window.__WELCOME_CLICKED = true
-    } catch (e) {
-      // ignore
-    }
-
     if (typeof onEnter === 'function') {
       onEnter()
     }

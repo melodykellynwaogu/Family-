@@ -26,7 +26,7 @@ export default function Price() {
   ];
 
   return (
-    <section className="price">
+    <section className="price" id="why-shop">
       <div className="price__container">
         <h2 className="price__title">Why Shop With Us</h2>
 
