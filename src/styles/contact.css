@@ -189,17 +189,15 @@
 /* BUTTON */
 
 .contacts__btn {
-  width: fit-content;
-  padding: 16px 28px;
-  border: none;
-  border-radius: 14px;
   background: #22c55e;
   color: white;
+  border: none;
+  padding: 16px 0;
+  border-radius: 12px;
   font-size: 1rem;
-  font-weight: 800;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 200ms ease;
-  margin-top: 8px;
+  transition: all 0.3s ease;
 }
 
 .contacts__btn:hover {
