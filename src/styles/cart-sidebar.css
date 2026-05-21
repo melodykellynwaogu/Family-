@@ -1,7 +1,5 @@
 .cart-sidebar {
-  position: sticky;
-  top: 24px;
-  width: 320px;
+  width: min(100%, 460px);
   padding: 22px;
   border-radius: 26px;
   background: linear-gradient(180deg, rgba(10, 24, 14, 0.98), rgba(17, 40, 24, 0.96));
@@ -101,12 +99,4 @@
 .cart-sidebar__checkout:disabled {
   opacity: 0.55;
   cursor: not-allowed;
-}
-
-@media (max-width: 1200px) {
-  .cart-sidebar {
-    width: 100%;
-    position: relative;
-    top: auto;
-  }
 }

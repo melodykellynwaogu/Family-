@@ -81,11 +81,13 @@ function App() {
             onAdd={handleAdd}
           />
         </Suspense>
+      </main>
 
+      <section className="cart-section" aria-label="Shopping cart summary">
         <Suspense fallback={<div className="cart-skeleton" />}>
           <CartSidebar cartItems={cartItems} total={total} onRemove={handleRemove} onClear={handleClear} />
         </Suspense>
-      </main>
+      </section>
 
       <StoreInfo />
       <Testimonials />

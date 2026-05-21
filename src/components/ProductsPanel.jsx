@@ -1,4 +1,3 @@
-import React from 'react'
 import ProductCard from './ProductCard'
 import products from '../data/products'
 import '../styles/product-card.css'
@@ -14,8 +13,8 @@ function ProductsPanel({ selectedCategory, setSelectedCategory, searchTerm, setS
   })
 
   return (
-    <>
-      <section className="shop-panel">
+    <section className="products-explorer" id="products-grid">
+      <div className="products-controls">
         <div className="search-card">
           <label htmlFor="search">Search groceries</label>
           <input
@@ -23,7 +22,7 @@ function ProductsPanel({ selectedCategory, setSelectedCategory, searchTerm, setS
             type="search"
             value={searchTerm}
             onChange={(event) => setSearchTerm(event.target.value)}
-            placeholder="Search products, meals, or snacks"
+            placeholder="Search products, meals, snacks..."
           />
         </div>
 
@@ -39,9 +38,9 @@ function ProductsPanel({ selectedCategory, setSelectedCategory, searchTerm, setS
             </button>
           ))}
         </div>
-      </section>
+      </div>
 
-      <section className="products-panel">
+      <div className="products-panel">
         <div className="products-header">
           <div>
             <span className="products-label">{selectedCategory === 'All' ? 'All products' : selectedCategory}</span>
@@ -58,8 +57,8 @@ function ProductsPanel({ selectedCategory, setSelectedCategory, searchTerm, setS
             <div className="empty-state">No products match your search. Try a different keyword.</div>
           )}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
 

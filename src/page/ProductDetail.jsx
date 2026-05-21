@@ -3,7 +3,7 @@ import products from '../data/products';
 import ProductCard from '../components/ProductCard';
 import '../styles/product-detail.css';
 
-const STORE_EMAIL = 'contact@familyfairsupermarket.com';
+const STORE_EMAIL = 'frutocana@gmail.com';
 const STORE_MAP_URL =
   'https://www.google.com/maps/dir/?api=1&destination=Family+Fair+Supermarket,+Lilongwe+Malawi';
 
@@ -20,7 +20,7 @@ export default function ProductDetail({ onAdd }) {
   const handleCheckAvailability = () => {
     const subject = encodeURIComponent(`Product availability request: ${product.name}`);
     const body = encodeURIComponent(
-      `Hello Family Fair team,%0D%0A%0D%0AI would like to check availability for the following product:%0D%0A- Product: ${product.name}%0D%0A- Category: ${product.category}%0D%0A- Price: $${product.price.toFixed(2)} ${product.unit}%0D%0A%0D%0APlease let me know if this item is available in-store.%0D%0A%0D%0AThank you!`
+      `Hello Family Fair team, I would like to check availability for the following product:- ${product.name} - Category: ${product.category} - Price: $${product.price.toFixed(2)} ${product.unit} Please let me know if this item is available in-store. Thank you!`
     );
     window.location.href = `mailto:${STORE_EMAIL}?subject=${subject}&body=${body}`;
   };

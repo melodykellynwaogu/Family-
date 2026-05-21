@@ -27,7 +27,7 @@ export default function NewsletterSubscription() {
               id="newsletter-email"
               type="email"
               name="email"
-              placeholder="you@example.com"
+              placeholder="frutocana@gmail.com"
               required
             />
             <button type="submit">Subscribe</button>
