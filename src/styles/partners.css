@@ -103,17 +103,52 @@
 }
 
 @media (max-width: 760px) {
+  .partners {
+    padding: 3rem 1rem;
+  }
+
+  .partners__intro {
+    margin-bottom: 1.2rem;
+  }
+
+  .partners__intro h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .partners__intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .partners__marquee {
+    mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  }
+
   .partners__card {
-    width: 180px;
-    min-height: 98px;
+    width: 168px;
+    min-height: 92px;
+    border-radius: 12px;
+    padding: 0.5rem;
   }
 
   .partners__logo-wrap {
-    width: 70px;
-    height: 46px;
+    width: 60px;
+    height: 40px;
+  }
+
+  .partners__card span {
+    font-size: 0.74rem;
   }
 
   .partners__track {
-    animation-duration: 22s;
+    gap: 10px;
+    animation-duration: 20s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners__track {
+    animation: none;
   }
 }

@@ -69,3 +69,32 @@
   color: #516659;
   line-height: 1.75;
 }
+
+@media (max-width: 760px) {
+  .about-us {
+    padding: 3rem 1rem;
+  }
+
+  .about-us__intro {
+    margin-bottom: 1.2rem;
+  }
+
+  .about-us__intro h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .about-us__intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .about-us__timeline {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .about-us__card {
+    border-radius: 16px;
+    padding: 1rem;
+  }
+}

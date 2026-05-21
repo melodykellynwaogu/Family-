@@ -48,13 +48,13 @@ export default function ModernFooter() {
           <div>
             <h3>Visit us</h3>
             <ul>
-              <li>123 Market Lane, Lilongwe</li>
+              <li>Area 36 Market Lane, Lilongwe</li>
               <li>Open daily: 7:00 AM - 9:00 PM</li>
               <li>
-                <a href="tel:+265888123456">+265 888 123 456</a>
+                <a href="tel:+265881146791">+265 881 146 791</a>
               </li>
               <li>
-                <a href="mailto:hello@familyfair.store">hello@familyfair.store</a>
+                <a href="mailto:frutocana@gmail.com">frutocana@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -64,7 +64,7 @@ export default function ModernFooter() {
           <p>© 2026 Family Fair Supermarket. All rights reserved.</p>
           <div className="modern-footer__socials">
             <a href="https://www.instagram.com/familyfair2026" target="_blank" rel="noreferrer">Instagram</a>
-            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a>
+            {/* <a href="https://www.facebook.com" target="_blank" rel="noreferrer">Facebook</a> */}
           </div>
         </div>
       </div>

@@ -20,7 +20,7 @@ const tiers = [
 
 const memberPerks = [
   'Member-only weekly offers',
-  'Birthday month shopping rewards',
+  'Best customer of the month shopping rewards',
   'Points redemption on selected essentials',
 ]
 

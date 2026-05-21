@@ -91,11 +91,32 @@
 }
 
 @media (max-width: 760px) {
+  .newsletter-subscription {
+    padding: 3rem 1rem;
+  }
+
+  .newsletter-subscription h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .newsletter-subscription__copy {
+    margin: 0.8rem auto 1.1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
   .newsletter-subscription__row {
     flex-direction: column;
+    border-radius: 14px;
+    padding: 0.45rem;
+  }
+
+  .newsletter-subscription__row input,
+  .newsletter-subscription__row button {
+    min-height: 42px;
   }
 
   .newsletter-subscription__row button {
-    padding: 0.85rem 1.2rem;
+    padding: 0.8rem 1.2rem;
   }
 }

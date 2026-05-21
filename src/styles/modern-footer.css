@@ -53,6 +53,7 @@
 .modern-footer__grid a {
   color: #fef9c3;
   text-decoration: none;
+  word-break: break-word;
 }
 
 .modern-footer__grid a:hover {
@@ -87,4 +88,35 @@
 
 .modern-footer__socials a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 760px) {
+  .modern-footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .modern-footer__brand {
+    margin-bottom: 1.2rem;
+  }
+
+  .modern-footer__brand p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .modern-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .modern-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+
+  .modern-footer__socials {
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
 }

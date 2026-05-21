@@ -142,10 +142,49 @@
 
 @media (max-width: 768px) {
   .promotions {
-    padding: 60px 16px;
+    padding: 54px 16px;
   }
 
   .promotions__header {
-    margin-bottom: 32px;
+    margin-bottom: 24px;
+  }
+
+  .promotions__title {
+    font-size: clamp(1.8rem, 8vw, 2.3rem);
+  }
+
+  .promotions__subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .promotions__button {
+    width: 100%;
+    min-height: 44px;
+    padding: 12px 18px;
+  }
+
+  .promotions__grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .promotions__card {
+    padding: 16px;
+    border-radius: 16px;
+    gap: 12px;
+  }
+
+  .promotions__card h3 {
+    font-size: 1.14rem;
+  }
+
+  .promotions__price {
+    font-size: 1.5rem;
+  }
+
+  .promotions__link {
+    width: 100%;
+    min-height: 42px;
   }
 }

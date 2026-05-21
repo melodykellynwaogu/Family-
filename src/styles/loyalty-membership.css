@@ -87,3 +87,37 @@
   background: rgba(255, 255, 255, 0.08);
   font-size: 0.92rem;
 }
+
+@media (max-width: 760px) {
+  .loyalty-membership {
+    padding: 3rem 1rem;
+  }
+
+  .loyalty-membership__intro {
+    margin-bottom: 1.2rem;
+  }
+
+  .loyalty-membership__intro h2 {
+    font-size: clamp(1.6rem, 7vw, 2rem);
+  }
+
+  .loyalty-membership__intro p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .loyalty-membership__grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .loyalty-membership__card {
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .loyalty-membership__benefits span {
+    font-size: 0.82rem;
+    padding: 0.5rem 0.75rem;
+  }
+}

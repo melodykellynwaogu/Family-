@@ -97,9 +97,44 @@
 .store-info__hour-row {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   color: #3c4f3b;
 }
 
 .store-info__hour-row span:first-child {
   font-weight: 600;
+}
+
+@media (max-width: 760px) {
+  .store-info {
+    padding: 3rem 1rem;
+  }
+
+  .store-info__header {
+    margin-bottom: 1.2rem;
+  }
+
+  .store-info__header h2 {
+    font-size: clamp(1.6rem, 6.8vw, 2rem);
+  }
+
+  .store-info__header p {
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .store-info__grid {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .store-info__card {
+    border-radius: 16px;
+    padding: 1rem;
+  }
+
+  .store-info__hour-row {
+    flex-direction: column;
+    gap: 2px;
+  }
 }
