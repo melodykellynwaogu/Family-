@@ -1,0 +1,71 @@
+.about-us {
+  padding: 4rem 1.5rem;
+  background: linear-gradient(180deg, #eef8ef 0%, #f8fdf7 100%);
+}
+
+.about-us__container {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.about-us__intro {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.about-us__eyebrow {
+  color: #22623a;
+  font-size: 0.85rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.about-us__intro h2 {
+  margin: 0;
+  color: #0d2513;
+  font-size: clamp(2rem, 2.7vw, 3rem);
+  line-height: 1.1;
+}
+
+.about-us__intro p {
+  margin-top: 1rem;
+  color: #4d6253;
+  line-height: 1.8;
+}
+
+.about-us__timeline {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.about-us__card {
+  border: 1px solid rgba(22, 101, 52, 0.14);
+  border-radius: 22px;
+  background: #ffffff;
+  padding: 1.45rem;
+  box-shadow: 0 16px 40px rgba(14, 35, 19, 0.08);
+}
+
+.about-us__year {
+  display: inline-flex;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  background: #e7f6ea;
+  color: #166534;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.about-us__card h3 {
+  margin: 0.85rem 0 0.6rem;
+  color: #14311e;
+  font-size: 1.15rem;
+}
+
+.about-us__card p {
+  margin: 0;
+  color: #516659;
+  line-height: 1.75;
+}

@@ -45,9 +45,9 @@ export default function ProductsPage() {
             Discover our wide selection of fresh groceries, household essentials, and quality products for your family.
           </p>
 
-          <button className="products-page__cta">
+          {/* <button className="products-page__cta">
             Start Shopping
-          </button>
+          </button> */}
         </div>
       </section>
 

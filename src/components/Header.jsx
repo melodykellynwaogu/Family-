@@ -29,6 +29,8 @@ export default function Header({ onSelectCategory }) {
           <a href="/#store-info">Store Info</a>
           <a href="/#membership">Membership</a>
           <a href="/#newsletter">Newsletter</a>
+          <a href="/#about-us">About Us</a>
+          <a href="/#partners">Partners</a>
         </nav>
 
         <div className="ff-header__actions">
@@ -49,6 +51,8 @@ export default function Header({ onSelectCategory }) {
           <a href="/#store-info" onClick={closeMobile}>Store Info</a>
           <a href="/#membership" onClick={closeMobile}>Membership</a>
           <a href="/#newsletter" onClick={closeMobile}>Newsletter</a>
+          <a href="/#about-us" onClick={closeMobile}>About Us</a>
+          <a href="/#partners" onClick={closeMobile}>Partners</a>
           <Link to="/contact" onClick={closeMobile}>Contact</Link>
           <Link to="/products" onClick={closeMobile}>All Products</Link>
         </div>

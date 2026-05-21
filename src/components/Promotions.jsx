@@ -4,13 +4,13 @@ import '../styles/promotions.css'
 const promotions = [
   {
     title: 'Deal of the Week',
-    product: 'Family Salmon Tray',
-    description: 'Fresh salmon fillets ready for a healthy dinner.',
-    oldPrice: 24.0,
-    price: 18.9,
-    badge: '20% off',
-    label: 'Limited Offer',
-    to: '/product/salmon',
+    product: 'Blue Band Margarine',
+    description: 'Versatile margarine for spreading, cooking, and baking.',
+    oldPrice: 14.5,
+    price: 13.5,
+    badge: '25% off',
+    label: 'Seasonal Offer ',
+    to: '/product/spreading',
   },
   {
     title: 'Fresh Savings',

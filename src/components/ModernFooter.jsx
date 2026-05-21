@@ -7,6 +7,8 @@ const quickLinks = [
   { label: 'Products', href: '/#products-section' },
   { label: 'Membership', href: '/#membership' },
   { label: 'Newsletter', href: '/#newsletter' },
+  { label: 'About Us', href: '/#about-us' },
+  { label: 'Partners', href: '/#partners' },
 ]
 
 const categories = ['Fresh Produce', 'Dairy', 'Snacks', 'Beverages']
@@ -46,13 +48,13 @@ export default function ModernFooter() {
           <div>
             <h3>Visit us</h3>
             <ul>
-              <li>Area 36 Market Lane, Lilongwe</li>
+              <li>123 Market Lane, Lilongwe</li>
               <li>Open daily: 7:00 AM - 9:00 PM</li>
               <li>
-                <a href="tel:+265881146791">+265 881 146 791</a>
+                <a href="tel:+265888123456">+265 888 123 456</a>
               </li>
               <li>
-                <a href="mailto:frutocana@gmail.com">frutocana@gmail.com</a>
+                <a href="mailto:hello@familyfair.store">hello@familyfair.store</a>
               </li>
             </ul>
           </div>

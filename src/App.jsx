@@ -10,6 +10,8 @@ import StoreInfo from './components/StoreInfo'
 import Testimonials from './components/Testimonials'
 import LoyaltyMembership from './components/LoyaltyMembership'
 import NewsletterSubscription from './components/NewsletterSubscription'
+import AboutUsStory from './components/AboutUsStory'
+import Partners from './components/Partners'
 import ModernFooter from './components/ModernFooter'
 import ContactPage from './page/Contact.jsx'
 import ProductsPage from './page/ProductsPage.jsx'
@@ -93,6 +95,8 @@ function App() {
       <Testimonials />
       <LoyaltyMembership />
       <NewsletterSubscription />
+      <AboutUsStory />
+      <Partners />
       <ModernFooter />
 
       <div className="cart-summary">{cartCount} item{cartCount === 1 ? '' : 's'} in cart</div>

@@ -37,7 +37,7 @@ export default function NewsletterSubscription() {
         <p className="newsletter-subscription__status" role="status">
           {isSubscribed
             ? 'Thanks for subscribing. Your weekly offers will arrive soon.'
-            : 'No spam. Only useful supermarket updates.'}
+            : 'Only useful supermarket updates.'}
         </p>
       </div>
     </section>
