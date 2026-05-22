@@ -85,7 +85,7 @@ export default function ProductDetail({ onAdd }) {
             <h1 className="product-detail__title">{product.name}</h1>
 
             <div className="product-detail__pricing">
-              <span className="product-detail__price">${product.price.toFixed(2)}</span>
+              <span className="product-detail__price">MWK{product.price.toFixed(2)}</span>
               <span className="product-detail__unit">{product.unit}</span>
             </div>
 

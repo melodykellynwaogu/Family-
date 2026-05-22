@@ -28,7 +28,7 @@ function CartSidebar({ cartItems, total, onRemove, onClear }) {
       </div>
       <div className="cart-sidebar__summary">
         <div className="cart-sidebar__total-label">Total</div>
-        <div className="cart-sidebar__total-value">${total.toFixed(2)}</div>
+        <div className="cart-sidebar__total-value">MWK{total.toFixed(2)}</div>
       </div>
       <button type="button" className="cart-sidebar__checkout" disabled={cartItems.length === 0}>
         Checkout

@@ -21,7 +21,7 @@ function ProductCard({ product, onAdd, isClickable = true }) {
       <div className="product-card__name">{product.name}</div>
       <p className="product-card__description">{product.description}</p>
       <div className="product-card__footer">
-        <span className="product-card__price">${product.price.toFixed(2)}</span>
+        <span className="product-card__price">MWK{product.price.toFixed(2)}</span>
         <span className="product-card__unit">{product.unit}</span>
       </div>
       <button type="button" className="product-card__button" onClick={(e) => {

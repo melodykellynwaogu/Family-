@@ -6,8 +6,8 @@ const promotions = [
     title: 'Deal of the Week',
     product: 'Blue Band Margarine',
     description: 'Versatile margarine for spreading, cooking, and baking.',
-    oldPrice: 14.5,
-    price: 13.5,
+    oldPrice: 14000,
+    price: 13500,
     badge: '25% off',
     label: 'Seasonal Offer ',
     to: '/product/spreading',
@@ -16,8 +16,8 @@ const promotions = [
     title: 'Fresh Savings',
     product: 'Whole Wheat Pasta',
     description: 'Organic pasta for family meals and easy recipes.',
-    oldPrice: 4.5,
-    price: 3.6,
+    oldPrice: 2500,
+    price: 2000,
     badge: '20% off',
     label: 'New Arrival',
     to: '/product/pasta',
@@ -26,8 +26,8 @@ const promotions = [
     title: 'Baker’s Special',
     product: 'Family Cookie Pack',
     description: 'Soft chocolate chip cookies that everyone loves.',
-    oldPrice: 9.5,
-    price: 7.25,
+    oldPrice: 5000,
+    price: 4750,
     badge: '25% off',
     label: 'Seasonal Offer',
     to: '/product/cookies',
@@ -59,8 +59,8 @@ export default function Promotions() {
               <h3>{deal.product}</h3>
               <p>{deal.description}</p>
               <div className="promotions__price-row">
-                <span className="promotions__price">${deal.price.toFixed(2)}</span>
-                <span className="promotions__old-price">${deal.oldPrice.toFixed(2)}</span>
+                <span className="promotions__price">MWK{deal.price.toFixed(2)}</span>
+                <span className="promotions__old-price">MWK{deal.oldPrice.toFixed(2)}</span>
               </div>
               <Link to={deal.to} className="promotions__link">
                 View product

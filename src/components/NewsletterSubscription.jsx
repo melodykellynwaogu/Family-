@@ -1,12 +1,65 @@
 import { useState } from 'react'
 import '../styles/newsletter-subscription.css'
 
-export default function NewsletterSubscription() {
-  const [isSubscribed, setIsSubscribed] = useState(false)
+const NEWSLETTER_ENDPOINT = import.meta.env.VITE_NEWSLETTER_ENDPOINT
+const NEWSLETTER_RECIPIENT = import.meta.env.VITE_NEWSLETTER_RECIPIENT || 'hello@familyfair.store'
 
-  const onSubmit = (event) => {
+export default function NewsletterSubscription() {
+  const [email, setEmail] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [status, setStatus] = useState({ type: 'idle', message: 'Only useful supermarket updates.' })
+
+  const submitToEndpoint = async (value) => {
+    const response = await fetch(NEWSLETTER_ENDPOINT, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: value,
+        source: 'family-fair-newsletter',
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error('Request failed')
+    }
+  }
+
+  const openMailtoFallback = (value) => {
+    const subject = encodeURIComponent('Newsletter Subscription Request')
+    const body = encodeURIComponent(
+      `Hello Family Fair,%0D%0A%0D%0APlease subscribe this email to weekly offers:%0D%0A${value}%0D%0A%0D%0AThank you.`,
+    )
+    window.location.href = `mailto:${NEWSLETTER_RECIPIENT}?subject=${subject}&body=${body}`
+  }
+
+  const onSubmit = async (event) => {
     event.preventDefault()
-    setIsSubscribed(true)
+    if (isSubmitting) return
+
+    setIsSubmitting(true)
+    setStatus({ type: 'idle', message: 'Submitting your request...' })
+
+    try {
+      if (NEWSLETTER_ENDPOINT) {
+        await submitToEndpoint(email)
+        setStatus({ type: 'success', message: 'Thanks for subscribing. Your weekly offers will arrive soon.' })
+      } else {
+        openMailtoFallback(email)
+        setStatus({ type: 'success', message: 'Opening your mail app to complete subscription.' })
+      }
+      setEmail('')
+    } catch {
+      openMailtoFallback(email)
+      setStatus({
+        type: 'success',
+        message: 'API unavailable. Opening your mail app to complete subscription.',
+      })
+      setEmail('')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -27,17 +80,19 @@ export default function NewsletterSubscription() {
               id="newsletter-email"
               type="email"
               name="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               placeholder="frutocana@gmail.com"
               required
             />
-            <button type="submit">Subscribe</button>
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Submitting...' : 'Subscribe'}
+            </button>
           </div>
         </form>
 
         <p className="newsletter-subscription__status" role="status">
-          {isSubscribed
-            ? 'Thanks for subscribing. Your weekly offers will arrive soon.'
-            : 'Only useful supermarket updates.'}
+          {status.message}
         </p>
       </div>
     </section>
