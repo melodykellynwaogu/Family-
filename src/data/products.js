@@ -80,6 +80,16 @@ const products = [
     image: '/cookies.jpeg',
     description: 'Soft chocolate chip cookies everyone loves.',
   },
+
+  {
+    id: 'spreading',
+    name: 'Blue Band',
+    category: 'Dairy',
+    price: 14000,
+    unit: '500g',
+    image: '/spreading.jpeg',
+    description: 'Blue Band is a versatile margarine that can be used for spreading, cooking, and baking.',
+  },  
   {
     id: 'smoothie',
     name: 'Sobo Smoothie Kit',
@@ -93,20 +103,21 @@ const products = [
     id: 'spreading',
     name: 'Blue Band',
     category: 'Dairy',
-    price: 14000,
-    unit: '500g',
-    image: '/spreading.jpeg',
-    description: 'Blue Band is a versatile margarine that can be used for spreading, cooking, and baking.',
-  },
-  {
-    id: 'spreading',
-    name: 'Blue Band',
-    category: 'Dairy',
     price: 25000,
     unit: '1kg',
     image: '/spreading.jpeg',
     description: 'Blue Band is a versatile margarine that can be used for spreading, cooking, and baking.',
   },
+
+  {
+    id: 'cereal',
+    name: 'Corn Flakes',
+    category: 'Breakfast',
+    price: 12000,
+    unit: 'per box',
+    image: '/cornflakes.jpeg',
+    description: 'Classic corn flakes for a quick and tasty breakfast.',
+  },  
   {
     id: 'spreading',
     name: 'Blue Band',

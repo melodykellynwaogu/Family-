@@ -106,7 +106,7 @@ export default function Contacts() {
             className="contacts__back-btn"
             onClick={() => navigate('/')}
           >
-            Go back to homepage
+            Homepage
           </button>
 
           <div className="contacts__points">

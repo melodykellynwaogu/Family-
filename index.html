@@ -11,6 +11,8 @@
       name="description"
       content="Shop fresh groceries, household essentials, snacks, beverages, and family favorites at Family Fair Supermarket. Quality products with a modern shopping experience."
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://familyfair.vercel.app/" />
 
     <meta
       name="keywords"
@@ -27,6 +29,9 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_MW" />
+    <meta property="og:site_name" content="Family Fair Supermarket" />
+    <meta property="og:url" content="https://familyfair.vercel.app/" />
 
     <meta
       property="og:title"
@@ -38,7 +43,7 @@
       content="Fresh groceries, daily essentials, and family-friendly shopping all in one place."
     />
 
-    <meta property="og:image" content="/src/assets/family.png" />
+    <meta property="og:image" content="/family.png" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -53,10 +58,49 @@
       content="Fresh groceries, daily essentials, and family-friendly shopping all in one place."
     />
 
-    <meta name="twitter:image" content="/src/assets/family.png" />
+    <meta name="twitter:image" content="/family.png" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="/src/assets/family.png" />
+    <link rel="icon" type="image/png" href="/family.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "GroceryStore",
+        "name": "Family Fair Supermarket",
+        "description": "Fresh groceries, daily essentials, and family-friendly shopping in Lilongwe.",
+        "url": "https://familyfair.vercel.app/",
+        "image": "https://familyfair.vercel.app/family.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Area 36 Market Lane",
+          "addressLocality": "Lilongwe",
+          "addressCountry": "MW"
+        },
+        "telephone": "+265881146791",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "07:00",
+            "closes": "21:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "08:30",
+            "closes": "18:00"
+          }
+        ],
+        "sameAs": ["https://www.instagram.com/familyfair2026"]
+      }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

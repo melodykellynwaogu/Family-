@@ -1,5 +1,5 @@
-import { useState, lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { useState, useEffect, lazy, Suspense } from 'react'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import WelcomePage from './components/WelcomePage'
 import Header from './components/Header'
 import WhoWeServe from './components/WhoWeServe'
@@ -16,12 +16,14 @@ import ModernFooter from './components/ModernFooter'
 import ContactPage from './page/Contact.jsx'
 import ProductsPage from './page/ProductsPage.jsx'
 import ProductDetail from './page/ProductDetail.jsx'
+import { initAnalytics, trackPageView } from './lib/analytics'
 const Hero = lazy(() => import('./components/Hero'))
 const ProductsPanel = lazy(() => import('./components/ProductsPanel'))
 const CartSidebar = lazy(() => import('./components/CartSidebar'))
 import './App.css'
 
 function App() {
+  const location = useLocation()
   const [hasEntered, setHasEntered] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [searchTerm, setSearchTerm] = useState('')
@@ -59,6 +61,27 @@ function App() {
   function handleEnterSite() {
     setHasEntered(true)
   }
+
+  useEffect(() => {
+    initAnalytics()
+
+    const verificationCode = import.meta.env.VITE_GOOGLE_SITE_VERIFICATION
+    if (!verificationCode) {
+      return
+    }
+
+    let metaTag = document.querySelector('meta[name="google-site-verification"]')
+    if (!metaTag) {
+      metaTag = document.createElement('meta')
+      metaTag.setAttribute('name', 'google-site-verification')
+      document.head.appendChild(metaTag)
+    }
+    metaTag.setAttribute('content', verificationCode)
+  }, [])
+
+  useEffect(() => {
+    trackPageView(`${location.pathname}${location.search}`)
+  }, [location.pathname, location.search])
 
   const appContent = (
     <div className="family-fair-app">
@@ -100,6 +123,17 @@ function App() {
       <ModernFooter />
 
       <div className="cart-summary">{cartCount} item{cartCount === 1 ? '' : 's'} in cart</div>
+
+      <a
+        className="whatsapp-float"
+        href="https://wa.me/265881146791?text=Hello%20Family%20Fair%20Supermarket%2C%20I%20want%20to%20ask%20about%20your%20products."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with Family Fair on WhatsApp"
+      >
+        <span className="whatsapp-float__icon" aria-hidden="true">💬</span>
+        <span>WhatsApp Us</span>
+      </a>
     </div>
   )
 

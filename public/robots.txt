@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Core utility paths
+Disallow: /backend/
+Disallow: /node_modules/
+
+Sitemap: https://familyfair.vercel.app/sitemap.xml
