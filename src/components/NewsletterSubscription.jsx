@@ -29,7 +29,7 @@ export default function NewsletterSubscription() {
   const openMailtoFallback = (value) => {
     const subject = encodeURIComponent('Newsletter Subscription Request')
     const body = encodeURIComponent(
-      `Hello Family Fair,%0D%0A%0D%0APlease subscribe this email to weekly offers:%0D%0A${value}%0D%0A%0D%0AThank you.`,
+      `Hello Family Fair, Please subscribe this email to weekly offers: ${value} Thank you.`,
     )
     window.location.href = `mailto:${NEWSLETTER_RECIPIENT}?subject=${subject}&body=${body}`
   }
