@@ -49,7 +49,7 @@ export default function ModernFooter() {
             <h3>Visit us</h3>
             <ul>
               <li>Area 36 Market Lane, Lilongwe</li>
-              <li>Open daily: 7:00 AM - 9:00 PM</li>
+              <li>Open daily: 7:30 AM - 9:00 PM</li>
               <li>
                 <a href="tel:+265881146791">+265 881 146 791</a>
               </li>
