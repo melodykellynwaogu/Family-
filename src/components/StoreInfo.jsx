@@ -24,6 +24,9 @@ export default function StoreInfo() {
           <p>
             Physical visits are our focus. Find our location, opening hours, parking details, and media presence in one place.
           </p>
+          <p className="store-info__note">
+            Please note: we do not offer delivery. We welcome customers to visit our facilities and shop in person.
+          </p>
         </div>
 
         <div className="store-info__grid">

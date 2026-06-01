@@ -7,7 +7,7 @@ const NEWSLETTER_RECIPIENT = import.meta.env.VITE_NEWSLETTER_RECIPIENT || 'hello
 export default function NewsletterSubscription() {
   const [email, setEmail] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [status, setStatus] = useState({ type: 'idle', message: 'Only useful supermarket updates.' })
+  const [status, setStatus] = useState({ type: 'idle', message: 'Only useful supermarket updates and in-store offers.' })
 
   const submitToEndpoint = async (value) => {
     const response = await fetch(NEWSLETTER_ENDPOINT, {
@@ -66,9 +66,9 @@ export default function NewsletterSubscription() {
     <section className="newsletter-subscription" id="newsletter">
       <div className="newsletter-subscription__container">
         <p className="newsletter-subscription__eyebrow">Newsletter</p>
-        <h2>Get weekly offers and supermarket updates.</h2>
+        <h2>Get weekly offers and plan your next visit.</h2>
         <p className="newsletter-subscription__copy">
-          Share your email to receive fresh promotions, seasonal highlights, and smart family shopping tips.
+          Share your email to receive fresh promotions, seasonal highlights, and reminders that help customers visit the store at the right time.
         </p>
 
         <form className="newsletter-subscription__form" onSubmit={onSubmit}>

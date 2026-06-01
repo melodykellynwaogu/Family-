@@ -10,9 +10,9 @@ export default function WhoWeServe() {
         'Family Fair Supermarket welcomes individuals, families, and communities looking for fresh groceries, household essentials, and affordable everyday products in a friendly shopping environment.',
     },
     {
-      title: 'Customers who enjoy in-store shopping experiences',
+      title: 'Customers who prefer visiting the store',
       description:
-        'We focus on creating a clean, convenient, and enjoyable supermarket experience that encourages customers to regularly visit both our website and physical store to discover quality products, special offers, and new arrivals.',
+        'We focus on creating a clean, convenient, and enjoyable supermarket experience that encourages customers to come to our facilities, browse the aisles, and choose products directly from the store.',
       cta: true,
     },
   ];
@@ -33,8 +33,8 @@ export default function WhoWeServe() {
                 <h3 className="who-we-serve__segment-title">{segment.title}</h3>
                 <p className="who-we-serve__segment-description">{segment.description}</p>
                 {segment.cta && (
-                  <Link to="/contact" className="who-we-serve__cta">
-                    Get started <span className="who-we-serve__arrow">→</span>
+                  <Link to="/#store-info" className="who-we-serve__cta">
+                    Plan a visit <span className="who-we-serve__arrow">→</span>
                   </Link>
                 )}
               </div>

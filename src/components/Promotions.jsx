@@ -5,7 +5,7 @@ const promotions = [
   {
     title: 'Deal of the Week',
     product: 'Blue Band Margarine',
-    description: 'Versatile margarine for spreading, cooking, and baking.',
+    description: 'A practical family essential to look out for on your next in-store visit.',
     oldPrice: 14000,
     price: 13500,
     badge: '25% off',
@@ -15,7 +15,7 @@ const promotions = [
   {
     title: 'Fresh Savings',
     product: 'Whole Wheat Pasta',
-    description: 'Organic pasta for family meals and easy recipes.',
+    description: 'A pantry staple with a friendly shelf price for families shopping in person.',
     oldPrice: 2500,
     price: 2000,
     badge: '20% off',
@@ -25,7 +25,7 @@ const promotions = [
   {
     title: 'Baker’s Special',
     product: 'Family Cookie Pack',
-    description: 'Soft chocolate chip cookies that everyone loves.',
+    description: 'A simple treat to pick up while you browse the aisles.',
     oldPrice: 5000,
     price: 4750,
     badge: '25% off',
@@ -40,12 +40,12 @@ export default function Promotions() {
       <div className="promotions__container">
         <div className="promotions__header">
           <div className="promotions__eyebrow">Weekly Deals</div>
-          <h2 className="promotions__title">Fresh offers to bring customers into the store</h2>
+          <h2 className="promotions__title">Fresh offers designed to bring customers into the store</h2>
           <p className="promotions__subtitle">
-            Highlight limited-time supermarket promotions, seasonal deals, and flash savings to keep shoppers coming back.
+            We use limited-time supermarket promotions, seasonal deals, and in-store savings to give people a reason to visit and shop locally.
           </p>
           <Link to="/products" className="promotions__button">
-            Browse all offers
+            See what to pick up
           </Link>
         </div>
 

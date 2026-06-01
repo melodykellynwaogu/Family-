@@ -34,6 +34,17 @@
   line-height: 1.75;
 }
 
+.store-info__note {
+  display: inline-flex;
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: 16px;
+  background: #e1f3e4;
+  color: #1f4d2c;
+  border: 1px solid rgba(37, 99, 45, 0.14);
+  font-weight: 600;
+}
+
 .store-info__grid {
   display: grid;
   gap: 1rem;
@@ -121,6 +132,13 @@
   .store-info__header p {
     line-height: 1.6;
     font-size: 0.95rem;
+  }
+
+  .store-info__note {
+    display: block;
+    margin-top: 0.85rem;
+    font-size: 0.92rem;
+    line-height: 1.5;
   }
 
   .store-info__grid {

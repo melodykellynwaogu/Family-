@@ -6,6 +6,7 @@ const partners = [
   { name: 'Cool Drop', logo: '/cooldrop.jpeg' },
   { name: 'Indomin', logo: '/Indomin.png' },
   { name: 'Frutocana', logo: '/fruticana.png' },
+  { name: 'Nivea', logo: '/nivea.jpeg' },
 ]
 
 const loopedPartners = [...partners, ...partners]
