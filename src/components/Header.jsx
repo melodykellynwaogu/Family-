@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/header.css'
 
+
 export default function Header({ onSelectCategory }) {
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -18,7 +19,7 @@ export default function Header({ onSelectCategory }) {
     <header className="ff-header">
       <div className="ff-header__inner">
         <a href="/#home" className="ff-brand" onClick={closeMobile}>
-          <span className="ff-brand__mark">FF</span>
+          {/* <span className="ff-brand__mark">FF</span> */}
           <span className="ff-brand__name">Family Fair</span>
         </a>
 

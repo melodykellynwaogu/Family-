@@ -212,7 +212,7 @@ export default function Contacts() {
                 />
               </div>
 
-              <div className="contacts__group">
+              {/* <div className="contacts__group">
                 <label>Country</label>
 
                 <select
@@ -224,7 +224,7 @@ export default function Contacts() {
                   <option>Nigeria</option>
                   <option>South Africa</option>
                 </select>
-              </div>
+              </div> */}
             </div>
 
             <button type="submit" className="contacts__btn" disabled={isSubmitting}>

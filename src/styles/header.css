@@ -26,7 +26,7 @@
   color: #f0fdf4;
 }
 
-.ff-brand__mark {
+/* .ff-brand__mark {
   width: 34px;
   height: 34px;
   border-radius: 10px;
@@ -36,7 +36,7 @@
   font-size: 0.88rem;
   background: linear-gradient(135deg, #a3e635, #4ade80);
   color: #0f1f12;
-}
+} */
 
 .ff-brand__name {
   font-weight: 800;

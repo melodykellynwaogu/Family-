@@ -83,11 +83,11 @@ app.post('/api/contact', requireConfiguredEmail, async (req, res) => {
   const email = String(req.body?.email || '').trim()
   const phone = String(req.body?.phone || '').trim()
   const city = String(req.body?.city || '').trim()
-  const country = String(req.body?.country || '').trim()
+  // const country = String(req.body?.country || '').trim()
   const source = String(req.body?.source || 'unknown').trim()
 
-  if (!fullName || !isValidEmail(email) || !phone || !city || !country) {
-    res.status(400).json({ error: 'fullName, email, phone, city, and country are required' })
+  if (!fullName || !isValidEmail(email) || !phone || !city ) {
+    res.status(400).json({ error: 'fullName, email, phone, city, are required' })
     return
   }
 
@@ -98,7 +98,7 @@ app.post('/api/contact', requireConfiguredEmail, async (req, res) => {
     `Email: ${email}`,
     `Phone: ${phone}`,
     `City: ${city}`,
-    `Country: ${country}`,
+    // `Country: ${country}`,
     `Source: ${source}`,
   ].join('\n')
 
@@ -109,7 +109,7 @@ app.post('/api/contact', requireConfiguredEmail, async (req, res) => {
       <strong>Email:</strong> ${email}<br/>
       <strong>Phone:</strong> ${phone}<br/>
       <strong>City:</strong> ${city}<br/>
-      <strong>Country:</strong> ${country}<br/>
+      
       <strong>Source:</strong> ${source}
     </p>
   `
