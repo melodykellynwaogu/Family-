@@ -4,32 +4,26 @@ const categoryCards = [
   {
     title: 'Fresh Produce',
     subtitle: 'Fruits and vegetables picked daily for your family.',
-    emoji: '🍓',
   },
   {
     title: 'Dairy',
     subtitle: 'Creamy, fresh, and locally sourced milk products.',
-    emoji: '🧀',
   },
   {
     title: 'Snacks',
     subtitle: 'Treats and on-the-go favourites for every appetite.',
-    emoji: '🍪',
   },
   {
     title: 'Beverages',
     subtitle: 'Cold drinks, juices, and everyday refreshments.',
-    emoji: '🥤',
   },
   {
     title: 'Frozen Foods',
     subtitle: 'Ready-to-cook meals, frozen treats and more.',
-    emoji: '🧊',
   },
   {
     title: 'Home Essentials',
     subtitle: 'Household basics for a clean and happy kitchen.',
-    emoji: '🏠',
   },
 ]
 
