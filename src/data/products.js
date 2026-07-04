@@ -140,7 +140,7 @@ const products = [
     prepTime: "15 mins",
     difficulty: "Easy",
     defaultServings: 4,
-    description: "Build the ultimate family taco night in minutes! Features fresh grass-fed beef, warm corn tortillas, ripe avocados, shredded sharp cheddar, and our signature fresh pico de gallo.",
+    description: "Build the ultimate family taco night in minutes!.",
     nutrition: {
       calories: "680 kcal",
       protein: "34g",
@@ -166,7 +166,7 @@ const products = [
     prepTime: "25 mins",
     difficulty: "Medium",
     defaultServings: 4,
-    description: "A restaurant-quality seafood dish made simple. Pan-seared salmon fillets in a luxurious creamy garlic, spinach, and sun-dried tomato sauce.",
+    description: "Pan-seared salmon fillets in a luxurious creamy garlic, spinach, and sun-dried tomato sauce.",
     nutrition: {
       calories: "740 kcal",
       protein: "42g",
