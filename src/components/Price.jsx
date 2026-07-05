@@ -1,59 +1,59 @@
-import { Link } from 'react-router-dom';
-import '../styles/price.css';
-import svg2Image from '../assets/family-ag4.svg';
-import svg3Image from '../assets/family-ag3.svg';
-import svg4Image from '../assets/family-ag2.svg';
+import { Link } from "react-router-dom";
+import "../styles/price.css";
 
 export default function Price() {
-  const price = [
-    {
-      description:
-        'Our supermarket experience is built to help customers easily explore products, discover special offers, and stay connected with Family Fair Supermarket through both our website and physical store.',
-      icon: svg2Image,
-    },
-    {
-      description:
-        'We focus on affordable pricing, quality groceries, and a welcoming shopping experience that keeps families and everyday shoppers returning regularly.',
-      icon: svg3Image,
-    },
-    {
-      description:
-        'As we continue to grow, our goal remains simple — provide fresh products, trusted service, and a modern supermarket experience for our local community.',
-      icon: svg4Image,
-
-      cta: true,
-    },
+  const features = [
+    "Fresh produce delivered daily",
+    "Affordable prices for every family",
+    "Carefully selected quality products",
+    "Friendly in-store shopping experience",
   ];
 
   return (
     <section className="price" id="why-shop">
+
       <div className="price__container">
-        <h2 className="price__title">Why Shop With Us</h2>
 
-        <div className="price__content">
-          {price.map((item, idx) => (
-            <div key={idx} className="price__item">
-              <div className="price__image-wrapper">
-                <img
-                  src={item.icon}
-                  alt="Family Fair illustration"
-                  className="price__image"
-                />
-              </div>
+        <p className="price__eyebrow">
+          WHY FAMILY FAIR
+        </p>
 
-              <p className="price__description">
-                {item.description}
-              </p>
+        <h2 className="price__title">
+          QUALITY
+          <br />
+          YOU CAN
+          <br />
+          TRUST.
+        </h2>
 
-              {item.cta && (
-                <Link to="/products" className="price__cta">
-                  See our products prices <span className="price__arrow">→</span>
-                </Link>
-              )}
+        <p className="price__subtitle">
+          Every visit is designed to make grocery shopping
+          easier, fresher, and more enjoyable. From seasonal
+          produce to everyday essentials, Family Fair focuses
+          on quality, affordability, and a welcoming experience
+          for everyone.
+        </p>
+
+        <div className="price__features">
+
+          {features.map((feature) => (
+            <div key={feature} className="price__feature">
+              <span className="price__check">+</span>
+              <span>{feature}</span>
             </div>
           ))}
+
         </div>
+
+        <Link
+          to="/products"
+          className="price__button"
+        >
+          View Products →
+        </Link>
+
       </div>
+
     </section>
   );
 }

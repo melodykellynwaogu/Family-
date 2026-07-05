@@ -30,7 +30,7 @@ const promotions = [
     price: 4750,
     badge: '25% off',
     label: 'Seasonal Offer',
-    to: '/product/cookies',
+    to: '/product/cookies', 
   },
 ]
 
@@ -39,13 +39,13 @@ export default function Promotions() {
     <section className="promotions" id="deals">
       <div className="promotions__container">
         <div className="promotions__header">
-          <div className="promotions__eyebrow">Weekly Deals</div>
-          <h2 className="promotions__title">Fresh offers designed to bring customers into the store</h2>
+          <div className="promotions__eyebrow">WEEKLY DEALS</div>
+          <h2 className="promotions_title">FRESH OFFERS FOR CUSTOMERS</h2>
           <p className="promotions__subtitle">
             We use limited-time supermarket promotions, seasonal deals, and in-store savings to give people a reason to visit and shop locally.
           </p>
           <Link to="/products" className="promotions__button">
-            See what to pick up
+            SEE WHAT'S ON SALE →
           </Link>
         </div>
 

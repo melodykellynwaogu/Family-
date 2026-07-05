@@ -1,118 +1,182 @@
+/* ==========================
+   SECTION
+========================== */
+
 .categories {
-  padding: 4rem 1.5rem;
-  background: linear-gradient(180deg, #f5faf4 0%, #ffffff 100%);
+    background: #ffff;
+    color: #22623a;
+    padding: 140px 7%;
 }
 
 .categories__container {
-  max-width: 1180px;
-  margin: 0 auto;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.categories__header {
+    max-width: 760px;
+    margin-bottom: 90px;
 }
 
 .categories__eyebrow {
-  color: #22623a;
-  font-size: 0.9rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: .85rem;
+    color: rgba(53, 158, 32,.8);
+    margin-bottom: 22px;
 }
 
 .categories__title {
-  font-size: clamp(2rem, 2.5vw, 3rem);
-  margin: 0;
-  line-height: 1.05;
-  color: #0d2513;
+    font-size: clamp(3rem,7vw,6rem);
+    line-height: .95;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 30px;
 }
 
 .categories__subtitle {
-  margin-top: 1rem;
-  max-width: 680px;
-  color: #4e6255;
-  line-height: 1.7;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: rgba(53, 158, 32,.8);
+    max-width: 650px;
 }
+
+/* ==========================
+   GRID
+========================== */
 
 .categories__grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
 }
+
+/* ==========================
+   CARD
+========================== */
 
 .categories__card {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem;
-  border: 1px solid rgba(22, 101, 52, 0.12);
-  border-radius: 24px;
-  background: #fff;
-  cursor: pointer;
-  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-  text-align: left;
+
+    background: transparent;
+
+    border: none;
+
+    border-top: 1px solid rgba(53, 158, 32,.8);
+
+    padding: 35px 0;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    gap: 25px;
+
+    color: #22623a;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: .35s;
+
 }
 
-.categories__card:hover,
-.categories__card:focus-visible {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(21, 37, 27, 0.08);
-  border-color: rgba(22, 101, 52, 0.28);
+.categories__card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.categories__icon {
+
+    font-size: 2rem;
+
+    flex-shrink: 0;
+
+    opacity: .8;
+
 }
 
 .categories__card h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  color: #14311e;
+
+    font-size: 1.8rem;
+
+    text-transform: uppercase;
+
+    line-height: 1.1;
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+
 }
 
 .categories__card p {
-  margin: 0.45rem 0 0;
-  color: #5b6d61;
-  line-height: 1.65;
+
+    color: rgba(53, 158, 32,.8);
+
+    line-height: 1.8;
+
+    max-width: 260px;
+
 }
 
 .categories__arrow {
-  margin-left: auto;
-  color: #6ea27a;
-  font-size: 1.4rem;
+
+    font-size: 1.5rem;
+
+    opacity: .4;
+
+    transition: .35s;
+
 }
 
-@media (max-width: 760px) {
-  .categories {
-    padding: 3rem 1rem;
-  }
+.categories__card:hover .categories__arrow {
 
-  .categories__title {
-    font-size: clamp(1.6rem, 7vw, 2rem);
-  }
+    opacity: 1;
 
-  .categories__subtitle {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
+    transform: translateX(8px);
 
-  .categories__grid {
-    grid-template-columns: 1fr;
-    margin-top: 1.2rem;
-    gap: 0.8rem;
-  }
+}
 
-  .categories__card {
-    padding: 0.95rem;
-    border-radius: 14px;
-  }
+/* ==========================
+   RESPONSIVE
+========================== */
 
-  .categories__icon {
-    width: 52px;
-    height: 52px;
-    font-size: 1.35rem;
-    border-radius: 14px;
-  }
+@media (max-width:1100px){
 
-  .categories__card h3 {
-    font-size: 1rem;
-  }
+    .categories__grid{
 
-  .categories__card p {
-    font-size: 0.86rem;
-    line-height: 1.45;
-  }
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .categories{
+
+        padding:90px 30px;
+
+    }
+
+    .categories__grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .categories__title{
+
+        font-size:3rem;
+
+    }
+
 }

@@ -54,7 +54,7 @@
 
     letter-spacing: 5px;
 
-    color: rgba(255,255,255,.6);
+    color: rgba(53, 158, 32,.8);
 
     margin-bottom: 25px;
 
@@ -66,7 +66,7 @@
 
     font-size: clamp(3rem,6vw,5.5rem);
 
-    line-height: .95;
+    line-height: .95; 
 
     text-transform: uppercase;
 
@@ -87,6 +87,8 @@
     font-size: 1.05rem;
 
     margin-bottom: 45px;
+
+    font-weight: 900;
 
 }
 
@@ -114,7 +116,7 @@
 
 .serve__button:hover {
 
-    background: white;
+    background: rgba(53, 158, 32,.8);
 
     color: black;
 
