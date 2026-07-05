@@ -8,9 +8,9 @@ export default function WelcomePage({ onEnter }) {
 
       <div className="welcome__content">
 
-        <p className="welcome__eyebrow">
+        {/* <p className="welcome__eyebrow">
           FAMILY FAIR
-        </p>
+        </p> */}
 
         <h1 className="welcome__title">
           FRESH FOOD.
